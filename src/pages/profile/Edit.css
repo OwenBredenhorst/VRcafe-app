@@ -1,0 +1,20 @@
+form {
+    margin: 2em;
+}
+
+form ion-input {
+    margin-bottom: 1em;
+    position: relative;
+}
+
+ion-item {
+    --padding-start: 0px;
+    --inner-padding-end: 0px;
+}
+
+form ion-icon {
+    position: absolute;
+    top: 36px;
+    right: 0;
+    width: 25px;
+}

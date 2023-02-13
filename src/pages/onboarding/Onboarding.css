@@ -1,0 +1,56 @@
+:root {
+  --ion-toolbar-height: 56px;
+}
+
+/* VRcafe theme */
+* {
+  font-family: "Tomorrow", sans-serif;
+}
+
+ion-content {
+  --ion-background-color: #640e8e;
+}
+
+ion-slide {
+  display: block;
+}
+
+h1 {
+  font-weight: bold !important;
+}
+
+p {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.slide1,
+.slide2 {
+  text-align: center;
+  margin: 0 1em 0 1em;
+}
+
+.swiper {
+  height: calc(100% - var(--ion-toolbar-height));
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+}
+
+.swiper-pagination-bullet {
+  background: #ffffff;
+}
+
+.swiper-pagination-bullet-active {
+  /* background: #000000 !important; */
+  background: #37f2a9 !important;
+}
+
+.slideContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
