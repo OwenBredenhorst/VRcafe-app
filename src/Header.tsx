@@ -1,7 +1,7 @@
 import { Redirect, Route } from 'react-router-dom';
 import {
-    IonApp, IonHeader, IonItem,
-    setupIonicReact
+  IonApp,
+  setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Onboarding from './pages/onboarding/Onboarding';
@@ -37,21 +37,12 @@ import {contrast} from "ionicons/icons";
 setupIonicReact();
 
 
-const App: React.FC = () => (
-
+const Header: React.FC = () => (
     <IonApp>
-      <IonReactRouter>
-        <Route path="/" component={Home} exact={true} />
-        <Route path="/register" component={Register} exact={true} />
-        <Route path="/login" component={Login} exact={true} />
-        <Route path="/onboarding" component={Onboarding} exact={true} />
-        <Route path="/profile" component={Profile} exact={true} />
-        <Route path="/edit" component={Edit} exact={true} />
-        <Route path="/rewards" component={Rewards} exact={true} />
-        <Route path="/admin" component={Admin} exact={true} />
+
         <Route path="/list" component={List} exact={true} />
-      </IonReactRouter>
+
     </IonApp>
   );
 
-export default App;
+export default Header;
