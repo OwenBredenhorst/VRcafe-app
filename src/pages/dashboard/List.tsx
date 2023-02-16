@@ -8,7 +8,7 @@ import {
     IonToolbar,
     IonButtons,
     IonImg,
-    IonLabel, IonInput
+    IonLabel, IonInput, IonDatetime, IonFooter
 } from "@ionic/react";
 import {arrowBackOutline, cameraOutline, radio} from "ionicons/icons";
 import "./List.css";
@@ -16,6 +16,8 @@ import "../../theme/GlobalStyling.css";
 
 import UserService from "../../services/UserService";
 import {Account} from "../user/Types";
+import Modal from "../../components/modal/Modal";
+import MainTabs from "../../components/MainTabs";
 
 const List: React.FC = () => {
     const [content, setContent] = useState([]);
@@ -33,7 +35,7 @@ const List: React.FC = () => {
 
     return (
         <IonPage>
-            <IonContent>
+            <IonContent fullscreen color="vrcafe-main">
                 <IonContent className="back-drop-background">
                     <div className="back-drop">
                         <div className="back-drop-left">
@@ -59,10 +61,10 @@ const List: React.FC = () => {
                     {/*    content komt hier dus zorg dat je in de template dit ergens anders heb*/}
 
 
-                    <IonPage>
+                    <div>
                         <form className="account-info-form">
 
-                            <IonInput className="input-form" placeholder="OwenBredenhorst" type="email" name="email"
+                            <IonInput className="input-form" placeholder="OwenBredenhorst" name="username"
                                       required></IonInput>
                             <IonIcon name="person" color="primary" slot="end"></IonIcon>
 
@@ -72,7 +74,7 @@ const List: React.FC = () => {
                                           required></IonInput>
                             </div>
                             <div className="login-form">
-                                <IonInput placeholder="OwenBredenhorst@gmail.com" type="password" name="password"
+                                <IonInput placeholder="OwenBredenhorst@gmail.com" type="email" name="email"
                                           required></IonInput>
                             </div>
                             <div className="firstNameLast">
@@ -85,16 +87,26 @@ const List: React.FC = () => {
                                               required></IonInput>
                                 </div>
                             </div>
-                            <div className="login-form">
-                                <IonInput placeholder="12/07/1999" type="password" name="password" required></IonInput>
-                            </div>
+                            <div className="login-form" >
+                                <IonDatetime className="test" color="dark" presentation="date"></IonDatetime>
+                        </div>
                             <div className="ion-text-center">
                                 <IonButton type="submit" fill="clear" className="form-submit">Save</IonButton>
                             </div>
+
+                            <IonFooter>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                            </IonFooter>
                         </form>
-                    </IonPage>
+                    </div>
                 </IonContent>
             </IonContent>
+
+            {/* TODO fix name and place of files */}
+            <MainTabs />
         </IonPage>
     );
 };

@@ -4,7 +4,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Onboarding from './pages/onboarding/Onboarding';
+
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -24,15 +24,10 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import Home from './pages/home/Home';
-import Register from './pages/user/Register';
-import Login from './pages/user/Login';
-import Profile from './pages/profile/Profile';
-import Edit from './pages/profile/Edit';
-import Rewards from './pages/rewards/Rewards';
-import Admin from './pages/dashboard/Admin';
-import List from './pages/dashboard/List';
+
+
 import {contrast} from "ionicons/icons";
+import edit from "./pages/profile/Edit";
 
 setupIonicReact();
 
@@ -40,7 +35,7 @@ setupIonicReact();
 const Header: React.FC = () => (
     <IonApp>
 
-        <Route path="/list" component={List} exact={true} />
+        <Route path="/list" component={edit} exact={true} />
 
     </IonApp>
   );

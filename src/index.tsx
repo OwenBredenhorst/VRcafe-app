@@ -3,8 +3,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
-import {createHeaders} from "workbox-streams/utils/createHeaders";
-import List from "./pages/dashboard/List";
+
 
 
 const container = document.getElementById('root');

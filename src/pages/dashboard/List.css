@@ -1,7 +1,7 @@
 
 .back-drop {
     background-color: #1E1E1E;
-
+    position: absolute;
 }
 
 .logo-top-nav {
@@ -74,9 +74,10 @@
 
     clip-path: polygon(0% 0, 100% 00%, 0 120px);
     background-color: #640E8E;
-    margin-top: -0.05em;
-    height: 22em;
+    height: 10em;
+    position: absolute;
     width: 100%;
+    top: 320px;
 }
 
 
@@ -89,5 +90,10 @@
     width: 100%;
 }
 
+.test{
+    background-color: #2a2a2a!important;
+    color: white !important;
+
+}
 
 

@@ -1,9 +1,8 @@
 import { Redirect, Route } from "react-router-dom";
 import { IonApp, IonIcon, IonLabel, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, IonToolbar, IonFooter } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
-import { home, gift } from "ionicons/icons";
-import Home from "../pages/home/Home";
-import Rewards from "../pages/rewards/Rewards";
+import {home, gift, person, trophy} from "ionicons/icons";
+
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -23,7 +22,12 @@ import "@ionic/react/css/display.css";
 
 /* Theme variables */
 import "../theme/variables.css";
+import "../theme/GlobalStyling.css";
+import React from "react";
 
+{/* TODO fix name and place of files */}
+{/* TODO add hexa / just like figma */}
+{/* TODO fix narbar nav locations*/}
 const MainTabs: React.FC = () => (
   <IonFooter>
     <IonToolbar>
@@ -34,12 +38,19 @@ const MainTabs: React.FC = () => (
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="home" href="/">
-            <IonIcon icon={home} />
+            {/*<div className="hex2">*/}
+            {/*  */}
+            {/*</div>*/}
+            <IonIcon className="active-icon" icon={home} />
             <IonLabel>home</IonLabel>
           </IonTabButton>
+          <IonTabButton tab="login" href="/">
+            <IonIcon icon={trophy} />
+            <IonLabel>Coupon</IonLabel>
+          </IonTabButton>
           <IonTabButton tab="rewards" href="/rewards">
-            <IonIcon icon={gift} />
-            <IonLabel>rewards</IonLabel>
+            <IonIcon icon={person} />
+            <IonLabel>Profile</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

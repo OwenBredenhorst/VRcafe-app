@@ -1,9 +1,9 @@
-import { Redirect, Route } from 'react-router-dom';
+import {Redirect, Route} from 'react-router-dom';
 import {
-    IonApp, IonHeader, IonItem,
+    IonApp, IonContent, IonFooter, IonHeader, IonItem, IonPage, IonTitle, IonToolbar,
     setupIonicReact
 } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
+import {IonReactRouter} from '@ionic/react-router';
 import Onboarding from './pages/onboarding/Onboarding';
 
 /* Core CSS required for Ionic components to work properly */
@@ -40,18 +40,27 @@ setupIonicReact();
 const App: React.FC = () => (
 
     <IonApp>
-      <IonReactRouter>
-        <Route path="/" component={Home} exact={true} />
-        <Route path="/register" component={Register} exact={true} />
-        <Route path="/login" component={Login} exact={true} />
-        <Route path="/onboarding" component={Onboarding} exact={true} />
-        <Route path="/profile" component={Profile} exact={true} />
-        <Route path="/edit" component={Edit} exact={true} />
-        <Route path="/rewards" component={Rewards} exact={true} />
-        <Route path="/admin" component={Admin} exact={true} />
-        <Route path="/list" component={List} exact={true} />
-      </IonReactRouter>
+        {/*<IonHeader>*/}
+        {/*    <IonToolbar>*/}
+
+        {/*    </IonToolbar>*/}
+        {/*</IonHeader>*/}
+        <IonPage>
+            <IonContent className="content-page">
+                <IonReactRouter>
+                    <Route path="/" component={List} exact={true}/>
+                    <Route path="/register" component={Register} exact={true}/>
+                    <Route path="/login" component={Login} exact={true}/>
+                    <Route path="/onboarding" component={Onboarding} exact={true}/>
+                    <Route path="/profile" component={Profile} exact={true}/>
+                    <Route path="/edit" component={Edit} exact={true}/>
+                    <Route path="/rewards" component={Rewards} exact={true}/>
+                    <Route path="/admin" component={Admin} exact={true}/>
+                    <Route path="/list" component={List} exact={true}/>
+                </IonReactRouter>
+            </IonContent>
+        </IonPage>
     </IonApp>
-  );
+);
 
 export default App;
