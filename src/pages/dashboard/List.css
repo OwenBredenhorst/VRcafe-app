@@ -1,15 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #2dd36f;
-
-}
 
 .back-drop {
     background-color: #1E1E1E;
+
 }
 
 .logo-top-nav {
@@ -55,16 +47,16 @@ body {
 
     width: 40%;
     float: left;
+
 }
 
 
 .back-drop-right img {
 
-    position: absolute;
+    float: right;
+    margin-right: 2em;
+    margin-top: 1em;
     width: 66px;
-    height: 63px;
-    left: 303px;
-    top: 18px;
     border: 2px solid #FFFFFF;
     border-radius: 49px;
 }
@@ -73,26 +65,29 @@ body {
     background-position-x: center;
     background-image: url("../../../public/assets/images/background.png");
     background-color: #640E8E;
-    height: 350px;
+    height: 320px;
     width: 100%;
 }
-
 
 
 .back-drop-bottom {
 
     clip-path: polygon(0% 0, 100% 00%, 0 120px);
     background-color: #640E8E;
-    height: 10em;
+    margin-top: -0.05em;
+    height: 22em;
     width: 100%;
 }
 
 
-.back-drop-background{
+.back-drop-background {
 
     background-position-x: center;
     background-image: url("../../../public/assets/images/background.png");
     background-repeat: repeat;
-    height:100%;
+    height: 100%;
     width: 100%;
 }
+
+
+

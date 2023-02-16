@@ -21,7 +21,7 @@ const Register: React.FC = () => {
           </div>
           <div className="register-form">
             <IonLabel>Wachtwoord</IonLabel>
-            <IonInput placeholder="Wachtwoord" type="password" name="pass" required></IonInput>
+            <IonInput placeholder="Wachtwoord" type="password" name="pass" required ></IonInput>
           </div>
           <div className="register-form">
             <IonLabel>Herhaal wachtwoord</IonLabel>

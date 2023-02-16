@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1E1E1E;
+
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+form input {
+    height: 3.5em;
+    background: #2a2a2a !important;
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.25) !important;
+    border-radius: 10px !important;
+}
+
+input::placeholder {
+    color: white !important;
+    font-weight: bold !important;
+    text-align: left;
+}
+
+.form-submit {
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #37f2a9;
+    border-radius: 15px;
+    font-size: 14px;
+    margin-top: 1em;
+
+    width: 100%;
+}
+
+
+.account-info-form {
+    margin-top: 12em;
+}

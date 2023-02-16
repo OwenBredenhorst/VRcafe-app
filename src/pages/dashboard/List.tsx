@@ -1,7 +1,18 @@
 import React, {useEffect, useState} from "react";
-import {IonContent, IonHeader, IonPage, IonIcon, IonButton, IonToolbar, IonButtons, IonImg} from "@ionic/react";
+import {
+    IonContent,
+    IonHeader,
+    IonPage,
+    IonIcon,
+    IonButton,
+    IonToolbar,
+    IonButtons,
+    IonImg,
+    IonLabel, IonInput
+} from "@ionic/react";
 import {arrowBackOutline, cameraOutline, radio} from "ionicons/icons";
 import "./List.css";
+import "../../theme/GlobalStyling.css";
 
 import UserService from "../../services/UserService";
 import {Account} from "../user/Types";
@@ -23,7 +34,7 @@ const List: React.FC = () => {
     return (
         <IonPage>
             <IonContent>
-                <div className="back-drop-background" >
+                <IonContent className="back-drop-background">
                     <div className="back-drop">
                         <div className="back-drop-left">
                             <div className="logo-top-nav">
@@ -45,10 +56,44 @@ const List: React.FC = () => {
                     </div>
 
 
-                    {/*    content komt hier  dus zorg dat je in de template dit ergens anders heb*/}
+                    {/*    content komt hier dus zorg dat je in de template dit ergens anders heb*/}
 
 
-                </div>
+                    <IonPage>
+                        <form className="account-info-form">
+
+                            <IonInput className="input-form" placeholder="OwenBredenhorst" type="email" name="email"
+                                      required></IonInput>
+                            <IonIcon name="person" color="primary" slot="end"></IonIcon>
+
+
+                            <div className="login-form">
+                                <IonInput placeholder="**********************" type="password" name="password"
+                                          required></IonInput>
+                            </div>
+                            <div className="login-form">
+                                <IonInput placeholder="OwenBredenhorst@gmail.com" type="password" name="password"
+                                          required></IonInput>
+                            </div>
+                            <div className="firstNameLast">
+                                <div className="register-form">
+                                    <IonInput placeholder="Owen" type="text" name="firstName" autocapitalize="on"
+                                              required></IonInput>
+                                </div>
+                                <div className="register-form">
+                                    <IonInput placeholder="Bredenhorst" type="text" name="lastName" autocapitalize="on"
+                                              required></IonInput>
+                                </div>
+                            </div>
+                            <div className="login-form">
+                                <IonInput placeholder="12/07/1999" type="password" name="password" required></IonInput>
+                            </div>
+                            <div className="ion-text-center">
+                                <IonButton type="submit" fill="clear" className="form-submit">Save</IonButton>
+                            </div>
+                        </form>
+                    </IonPage>
+                </IonContent>
             </IonContent>
         </IonPage>
     );
