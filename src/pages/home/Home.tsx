@@ -7,7 +7,7 @@ import Modal from "../../components/modal/Modal";
 
 import UserService from "../../services/UserService";
 import Greeting from "../../components/Greeting";
-import { Account } from "../user/Types";
+
 
 const Home: React.FC = () => {
   const [content, setContent] = useState([]);
@@ -45,10 +45,6 @@ const Home: React.FC = () => {
       <IonContent className="ion-padding" color="vrcafe-white">
         <Modal />
         <div>
-          <Greeting />
-          {content.map((entry: Account) => (
-            <p>{entry.email}</p>
-          ))}
         </div>
       </IonContent>
       <MainTabs />

@@ -34,18 +34,18 @@ const Onboarding: React.FC = () => {
     <IonPage>
       <IonHeader class="ion-no-border">
         <IonToolbar color="vrcafe-main">
-          <IonTitle slot="primary"></IonTitle>
+          <IonTitle ></IonTitle>
           <IonButtons slot="end">
-            <IonButton>overslaan</IonButton>
+            <IonButton href="/EditProfile">Skip</IonButton>
           </IonButtons>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
+      <IonContent color="vrcafe-main" fullscreen>
         <Swiper pagination={true} modules={[Pagination]}>
           <SwiperSlide>
             <div className="slideContent slide1">
               <img src="assets/images/LogoAnim.gif" alt="Animation of the VRcafe logo" />
-              <div>
+              <div className="information-form">
                 <h1>Welkom in de VRcafe app!</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus congue pellentesque</p>
               </div>
@@ -62,7 +62,7 @@ const Onboarding: React.FC = () => {
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus congue pellentesque</p>
               </div>
               <div className="navigator">
-                <SlideNextButton />
+                <SlideNextButton></SlideNextButton>
               </div>
             </div>
           </SwiperSlide>

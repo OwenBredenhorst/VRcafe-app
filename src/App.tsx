@@ -25,14 +25,14 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import Home from './pages/home/Home';
-import Register from './pages/user/Register';
-import Login from './pages/user/Login';
+
 import Profile from './pages/profile/Profile';
 import Edit from './pages/profile/Edit';
-import Rewards from './pages/rewards/Rewards';
+
 import Admin from './pages/dashboard/Admin';
-import List from './pages/dashboard/List';
+import EditProfile from './pages/dashboard/EditProfile';
 import {contrast} from "ionicons/icons";
+import Welcome from "./pages/welcome/Welcome";
 
 setupIonicReact();
 
@@ -48,15 +48,15 @@ const App: React.FC = () => (
         <IonPage>
             <IonContent className="content-page">
                 <IonReactRouter>
-                    <Route path="/" component={List} exact={true}/>
-                    <Route path="/register" component={Register} exact={true}/>
-                    <Route path="/login" component={Login} exact={true}/>
+                    <Route path="/" component={Onboarding} exact={true}/>
+
+
                     <Route path="/onboarding" component={Onboarding} exact={true}/>
                     <Route path="/profile" component={Profile} exact={true}/>
                     <Route path="/edit" component={Edit} exact={true}/>
-                    <Route path="/rewards" component={Rewards} exact={true}/>
+
                     <Route path="/admin" component={Admin} exact={true}/>
-                    <Route path="/list" component={List} exact={true}/>
+                    <Route path="/EditProfile" component={EditProfile} exact={true}/>
                 </IonReactRouter>
             </IonContent>
         </IonPage>

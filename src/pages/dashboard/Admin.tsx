@@ -4,7 +4,7 @@ import { camera } from "ionicons/icons";
 import "./Admin.css";
 
 import UserService from "../../services/UserService";
-import { Account } from "../user/Types";
+
 import Greeting from "../../components/Greeting";
 
 const Admin: React.FC = () => {
@@ -33,9 +33,7 @@ const Admin: React.FC = () => {
       <IonContent className="ion-padding" color="vrcafe-white">
         <div>
           <Greeting />
-          {content.map((entry: Account) => (
-            <p>{entry.email}</p>
-          ))}
+
         </div>
         <IonButton className="ion-margin-top buttonText" color="vrcafe-secondary" href="/list">Gebruikers</IonButton>
         <IonFab vertical="bottom" horizontal="center" slot="fixed">

@@ -27,7 +27,6 @@ import './theme/variables.css';
 
 
 import {contrast} from "ionicons/icons";
-import edit from "./pages/profile/Edit";
 
 setupIonicReact();
 
@@ -35,7 +34,6 @@ setupIonicReact();
 const Header: React.FC = () => (
     <IonApp>
 
-        <Route path="/list" component={edit} exact={true} />
 
     </IonApp>
   );

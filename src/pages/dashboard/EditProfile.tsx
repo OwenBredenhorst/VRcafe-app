@@ -8,18 +8,17 @@ import {
     IonToolbar,
     IonButtons,
     IonImg,
-    IonLabel, IonInput, IonDatetime, IonFooter
+    IonLabel, IonInput, IonDatetime, IonFooter, IonItem
 } from "@ionic/react";
-import {arrowBackOutline, cameraOutline, radio} from "ionicons/icons";
-import "./List.css";
+import {arrowBackOutline, cameraOutline, pencilOutline, radio} from "ionicons/icons";
+import "./EditProfile.css";
 import "../../theme/GlobalStyling.css";
 
 import UserService from "../../services/UserService";
-import {Account} from "../user/Types";
-import Modal from "../../components/modal/Modal";
+
 import MainTabs from "../../components/MainTabs";
 
-const List: React.FC = () => {
+const EditProfile: React.FC = () => {
     const [content, setContent] = useState([]);
 
     useEffect(() => {
@@ -64,13 +63,15 @@ const List: React.FC = () => {
                     <div>
                         <form className="account-info-form">
 
-                            <IonInput className="input-form" placeholder="OwenBredenhorst" name="username"
-                                      required></IonInput>
-                            <IonIcon name="person" color="primary" slot="end"></IonIcon>
+                            <IonItem lines="none" color="vrcafe-main">
+                                <IonInput className="input-form" placeholder="OwenBredenhorst" name="username" required>
+                                    {/*<IonIcon icon={pencilOutline}></IonIcon>*/}
+                                </IonInput>
+                            </IonItem>
 
 
-                            <div className="login-form">
-                                <IonInput placeholder="**********************" type="password" name="password"
+                            <div>
+                                <IonInput className="login-form" placeholder="**********************" type="password" name="password"
                                           required></IonInput>
                             </div>
                             <div className="login-form">
@@ -87,9 +88,9 @@ const List: React.FC = () => {
                                               required></IonInput>
                                 </div>
                             </div>
-                            <div className="login-form" >
+                            <div className="login-form">
                                 <IonDatetime className="test" color="dark" presentation="date"></IonDatetime>
-                        </div>
+                            </div>
                             <div className="ion-text-center">
                                 <IonButton type="submit" fill="clear" className="form-submit">Save</IonButton>
                             </div>
@@ -106,9 +107,9 @@ const List: React.FC = () => {
             </IonContent>
 
             {/* TODO fix name and place of files */}
-            <MainTabs />
+            <MainTabs/>
         </IonPage>
     );
 };
 
-export default List;
+export default EditProfile;
