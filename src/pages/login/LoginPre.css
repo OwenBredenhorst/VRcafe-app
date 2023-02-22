@@ -37,6 +37,43 @@
 }
 
 
+.login-button {
+    --background: rgba(36, 36, 36, 0.8) !important;
+    width: 100%;
+    margin-top: 20px;
+    height: 8vh;
+
+
+    font-size: 16px;
+}
+
+.login-button-main {
+    --background: #37F2A9 !important;
+    width: 100%;
+    margin-top: 20px;
+    height: 8vh;
+
+    color: black;
+    font-size: 16px;
+
+
+}
+
+.login-form{
+    text-align: center;
+    width: 80% ;
+    margin-top: 220px;
+
+}
+
+
+.parent-container {
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .back-drop-left {
 
     width: 60%;
@@ -96,14 +133,17 @@
 
 }
 
-
+.login-button-icon{
+    float: left;
+    margin-right: 20px;
+}
 
 .content-logo {
     display: flex;
     flex-direction: column;
     height: 200px;
     justify-content: center;
-    margin-top: 2em;
+    margin-top: 4em;
     width: 80%;
 }
 

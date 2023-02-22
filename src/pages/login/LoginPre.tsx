@@ -10,7 +10,7 @@ import {
     IonImg,
     IonLabel, IonInput, IonDatetime, IonFooter, IonItem
 } from "@ionic/react";
-import {arrowBackOutline, cameraOutline, pencilOutline, radio} from "ionicons/icons";
+import {arrowBackOutline, cameraOutline, logoFacebook, logoGoogle, pencilOutline, radio} from "ionicons/icons";
 import "./LoginPre.css";
 import "../../theme/GlobalStyling.css";
 
@@ -23,16 +23,6 @@ import SlideNextButton from "../../components/slider/Slider";
 const LoginPre: React.FC = () => {
     const [content, setContent] = useState([]);
 
-    useEffect(() => {
-        UserService.getUser()
-            .then((response) => {
-                // axios creates a data object on its own. back-end also contains a data object so it becomes data.data
-                setContent(response.data.data);
-            })
-            .catch((error) => {
-                console.log(error.toJSON());
-            });
-    }, []);
 
     return (
         <IonPage>
@@ -42,7 +32,23 @@ const LoginPre: React.FC = () => {
                         <img src="assets/images/logo.png" alt="VRcafe logo"/>
                     </div>
                 </div>
-                
+
+                <div className="parent-container">
+                    <div className="login-form" >
+                        <IonButton className="login-button-main"   >
+                            <IonImg   className="login-button-icon"  src="assets/images/logo.png" alt="Logo" style={{  marginRight: '8px', width: '37px'}} />
+                           login
+                        </IonButton>
+                        <IonButton  className="login-button">
+                            <IonIcon slot="start" style={{marginRight: '8px'}} icon={logoFacebook} />
+                            Login with Facebook
+                        </IonButton>
+                        <IonButton className="login-button">
+                            <IonIcon  slot="start" style={{marginRight: '8px'}}  icon={logoGoogle} />
+                            Login with Google
+                        </IonButton>
+                    </div>
+                </div>
                 </IonContent>
         </IonPage>
     );
