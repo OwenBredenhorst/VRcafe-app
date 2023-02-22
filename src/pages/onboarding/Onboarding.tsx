@@ -36,7 +36,7 @@ const Onboarding: React.FC = () => {
         <IonToolbar color="vrcafe-main">
           <IonTitle ></IonTitle>
           <IonButtons slot="end">
-            <IonButton href="/EditProfile">Skip</IonButton>
+            <IonButton href="/login-pre">Skip</IonButton>
           </IonButtons>
         </IonToolbar>
       </IonHeader>
@@ -46,8 +46,9 @@ const Onboarding: React.FC = () => {
             <div className="slideContent slide1">
               <img src="assets/images/LogoAnim.gif" alt="Animation of the VRcafe logo" />
               <div className="information-form">
-                <h1>Welkom in de VRcafe app!</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus congue pellentesque</p>
+                <h1>Welkom <br/>in de VRcafe app!</h1>
+                <p>Kom Virtual Reality gamen en kies uit meer dan 45 verschillende games en ervaringen. VR Lasergamen, VR Racen maar ook mooie arcade klassiekers, air hockey en drankjes zijn aanwezig.
+                  VRcafe, Let’s play!</p>
               </div>
               <div className="navigator">
                 <SlideNextButton />
@@ -57,12 +58,14 @@ const Onboarding: React.FC = () => {
           <SwiperSlide>
             <div className="slideContent slide2">
               <img src="assets/images/LogoAnim.gif" alt="Animation of the VRcafe logo" />
-              <div>
-                <h1>Scan de QR code</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus congue pellentesque</p>
+              <div className="information-form">
+                <h1>Scan <br/> de persoonlijke QR code</h1>
+                <p>Door het scannen van je persoonlijke QR code kan je je statistieken bijhouden, beloningen verdienen en meer!
+                </p>
               </div>
               <div className="navigator">
-                <SlideNextButton></SlideNextButton>
+                <IonButton href="/login-pre" fill="clear" className="slider-next">Volgende</IonButton>
+                {/*<SlideNextButton></SlideNextButton>*/}
               </div>
             </div>
           </SwiperSlide>

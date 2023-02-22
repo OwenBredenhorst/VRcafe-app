@@ -51,11 +51,34 @@ p {
 }
 
 .navigator {
-    margin-top: 20px;
+    margin-top: 200px;
     text-align: center;
+
+
+}
+.information-form p{
+    width: 90%;
+    margin-top: 20px;
+    height: 80px;
+    color: #FFFFFF;
+
+    font-family: 'Tomorrow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
 }
 
 
+.information-form h1{
+    font-family: 'Tomorrow';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+}
 .slideContent {
     display: flex;
     flex-direction: column;
