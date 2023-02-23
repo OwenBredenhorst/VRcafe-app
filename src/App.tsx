@@ -34,6 +34,7 @@ import EditProfile from './pages/dashboard/EditProfile';
 import {contrast} from "ionicons/icons";
 import Welcome from "./pages/welcome/Welcome";
 import LoginPre from "./pages/login/LoginPre";
+import Login from "./pages/login/Login";
 
 
 setupIonicReact();
@@ -58,6 +59,7 @@ const App: React.FC = () => (
                     <Route path="/edit" component={Edit} exact={true}/>
                     <Route path="/welcome" component={Welcome} exact={true}/>
                     <Route path="/login-pre" component={LoginPre} exact={true}/>
+                    <Route path="/login" component={Login} exact={true}/>
 
                     <Route path="/admin" component={Admin} exact={true}/>
                     <Route path="/edit-profile" component={EditProfile} exact={true}/>

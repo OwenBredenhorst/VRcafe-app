@@ -11,7 +11,7 @@ import {
     IonLabel, IonInput, IonDatetime, IonFooter, IonItem
 } from "@ionic/react";
 import {arrowBackOutline, cameraOutline, logoFacebook, logoGoogle, pencilOutline, radio} from "ionicons/icons";
-import "./LoginPre.css";
+import "./Login.css";
 import "../../theme/GlobalStyling.css";
 
 import UserService from "../../services/UserService";
@@ -34,20 +34,13 @@ const LoginPre: React.FC = () => {
                 </div>
 
                 <div className="parent-container">
-                    <div className="login-form" >
-                        <IonButton href="/login" className="login-button-main"   >
-                            <IonImg  className="login-button-icon"  src="assets/images/logo.png" alt="Logo" style={{  marginRight: '8px', width: '37px'}} />
-                           login
-                        </IonButton>
-                        <IonButton  href="/welcome" className="login-button">
-                            <IonIcon slot="start" style={{marginRight: '8px'}} icon={logoFacebook} />
-                            Login with Facebook
-                        </IonButton>
-                        <IonButton href="/welcome" className="login-button">
-                            <IonIcon  slot="start" style={{marginRight: '8px'}}  icon={logoGoogle} />
-                            Login with Google
-                        </IonButton>
-                        <p>Or Sign-up</p>
+                    <div className="login-form-submit" >
+                            <h1>Login</h1>
+                                <IonInput className="login-input" placeholder=" Username" type="text" ></IonInput>
+                                <IonInput className="login-input" placeholder="Password" type="text" ></IonInput>
+                            <p>Wachtwoord vergeten</p>
+                            <IonButton href="/login-pre" fill="clear" className="slider-next" style={{  marginTop: '90px', border: '25px'}}>Login</IonButton>
+                            <p>Geen account? maak er een!</p>
                     </div>
                 </div>
                 </IonContent>
