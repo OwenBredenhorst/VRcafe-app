@@ -39,8 +39,8 @@ const LoginPre: React.FC = () => {
                                 <IonInput className="login-input" placeholder=" Username" type="text" ></IonInput>
                                 <IonInput className="login-input" placeholder="Password" type="text" ></IonInput>
                             <p>Wachtwoord vergeten</p>
-                            <IonButton href="/login-pre" fill="clear" className="slider-next" style={{  marginTop: '90px', border: '25px'}}>Login</IonButton>
-                            <p>Geen account? maak er een!</p>
+                            <IonButton href="/welcome" fill="clear" className="slider-next" style={{  marginTop: '90px', border: '25px'}}>Login</IonButton>
+                        <a href="/register"><p>Geen account? maak er een!</p></a>
                     </div>
                 </div>
                 </IonContent>
