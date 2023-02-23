@@ -95,5 +95,46 @@
     color: white !important;
 
 }
+.card-content{
 
+    margin-top: 22vh;
+}
 
+.card-container {
+
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+ion-card {
+
+    border-radius: 17px;
+    width: 90%;
+    background-color: #1E1E1E;
+}
+
+.card-title{
+
+    color: #FFFFFF;
+    font-family: 'Tomorrow';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    margin-left: 15px;
+    margin-top: 12px;
+    letter-spacing: -0.02em;
+}
+
+.card-p{
+
+    font-family: 'Tomorrow';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: -0.02em;
+    color: #B8B7B7;
+}

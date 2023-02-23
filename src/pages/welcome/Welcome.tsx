@@ -8,7 +8,16 @@ import {
     IonToolbar,
     IonButtons,
     IonImg,
-    IonLabel, IonInput, IonDatetime, IonFooter, IonItem
+    IonLabel,
+    IonInput,
+    IonDatetime,
+    IonFooter,
+    IonItem,
+    IonCard,
+    IonCardHeader,
+    IonCardTitle,
+    IonCardContent,
+    IonCardSubtitle
 } from "@ionic/react";
 import {arrowBackOutline, cameraOutline, pencilOutline, radio} from "ionicons/icons";
 import "./Welcome.css";
@@ -56,6 +65,50 @@ const Welcome: React.FC = () => {
                     <div className="back-drop-bottom ">
                         <br/>
                     </div>
+
+                    <div className="card-content">
+                        <div className="card-container">
+                            <IonCard >
+                                <IonImg src="https://www.vrcafehaarlem.nl/wp-content/uploads/2021/06/vrcafe-1.jpeg" />
+                                <IonCardHeader>
+                                    <IonCardTitle className="card-title">Title of the Card</IonCardTitle>
+                                </IonCardHeader>
+                                <IonCardContent  className="card-p">
+                                    Here is some information text about the card. It can be multiple lines long.
+                                </IonCardContent>
+                            </IonCard>
+                        </div>
+
+                        <div className="card-container">
+                            <IonCard >
+                                <IonImg src="https://1001.pics/img/369x175x2/listings/bd702b5b-c5ee-4b00-8a97-83b5777ecc35/900x600/vr-racen.fpcaee0627.webp" />
+                                <IonCardHeader>
+                                    <IonCardTitle className="card-title">Title of the Card</IonCardTitle>
+                                </IonCardHeader>
+                                <IonCardContent  className="card-p">
+                                    Here is some information text about the card. It can be multiple lines long.
+                                </IonCardContent>
+                            </IonCard>
+                        </div>
+
+
+                        <div className="card-container">
+                            <IonCard >
+                                <IonImg src="https://image.coolblue.nl/624x351/content/875572a05d5dea6ba27785e1abc71203" />
+                                <IonCardHeader>
+                                    <IonCardTitle className="card-title">Title of the Card</IonCardTitle>
+                                </IonCardHeader>
+                                <IonCardContent  className="card-p">
+                                    Here is some information text about the card. It can be multiple lines long.
+                                </IonCardContent>
+                            </IonCard>
+                        </div>
+
+
+
+                    </div>
+
+
 
 
                     {/*    content komt hier dus zorg dat je in de template dit ergens anders heb*/}
