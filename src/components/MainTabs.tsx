@@ -37,7 +37,7 @@ const MainTabs: React.FC = () => (
           <Route exact path="/rewards"></Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="home" href="/">
+          <IonTabButton tab="home" href="/welcome">
             {/*<div className="hex2">*/}
             {/*  */}
             {/*</div>*/}
@@ -48,7 +48,7 @@ const MainTabs: React.FC = () => (
             <IonIcon icon={trophy} />
             <IonLabel>Coupon</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="rewards" href="/rewards">
+          <IonTabButton tab="rewards" href="/profile">
             <IonIcon icon={person} />
             <IonLabel>Profile</IonLabel>
           </IonTabButton>

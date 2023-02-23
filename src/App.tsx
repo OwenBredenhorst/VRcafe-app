@@ -26,7 +26,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import Home from './pages/home/Home';
 
-import Profile from './pages/profile/Profile';
+
 import Edit from './pages/profile/Edit';
 
 import Admin from './pages/dashboard/Admin';
@@ -36,6 +36,7 @@ import Welcome from "./pages/welcome/Welcome";
 import LoginPre from "./pages/login/LoginPre";
 import Login from "./pages/login/Login";
 import Register from "./pages/login/Register";
+import Profile from "./pages/user/Profile";
 
 
 setupIonicReact();
