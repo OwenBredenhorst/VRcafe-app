@@ -97,8 +97,20 @@
 }
 
 
+.coupon-container {
 
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
 
+}
+
+.coupon-containerr ion-card {
+
+    border-radius: 17px;
+    width: 90%;
+    background-color: #1E1E1E;
+}
 
 .card-title{
 

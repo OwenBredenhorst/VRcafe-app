@@ -108,7 +108,7 @@
 
 }
 
-ion-card {
+.card-container ion-card {
 
     border-radius: 17px;
     width: 90%;
