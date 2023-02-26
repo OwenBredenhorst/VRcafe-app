@@ -44,7 +44,7 @@ const MainTabs: React.FC = () => (
             <IonIcon className="active-icon" icon={home} />
             <IonLabel>home</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="login" href="/">
+          <IonTabButton tab="coupon" href="/coupon">
             <IonIcon icon={trophy} />
             <IonLabel>Coupon</IonLabel>
           </IonTabButton>
