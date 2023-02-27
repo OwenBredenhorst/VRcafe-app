@@ -117,3 +117,9 @@ form label {
     padding: 12px 110px;
     height: 2000px;
 }
+
+
+ion-progress-bar {
+    --background: #FD3D81; /* Set the progress color to green */
+    border-radius: 12.5px;
+}
