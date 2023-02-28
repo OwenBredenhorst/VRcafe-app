@@ -7,9 +7,9 @@
     font-family: "Tomorrow", sans-serif;
 }
 
-ion-content {
-    --ion-background-color: #1E1E1E;
-}
+/*ion-content {*/
+/*    --ion-background-color: #1E1E1E;*/
+/*}*/
 
 ion-slide {
     display: block;

@@ -17,7 +17,10 @@ import {
     IonCardHeader,
     IonCardTitle,
     IonCardContent,
-    IonCardSubtitle
+    IonCardSubtitle,
+    IonRow,
+    IonCol,
+    IonGrid, IonRouterLink, IonProgressBar
 } from "@ionic/react";
 import {arrowBackOutline, cameraOutline, pencilOutline, radio} from "ionicons/icons";
 
@@ -72,29 +75,75 @@ const Profile: React.FC = () => {
                                     <IonImg src="assets/images/pf-logo.png" alt="hexagon image with camera icon"
                                             style={{
                                                 clipPath: 'polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0 50%)',
-                                                width: '100px',
+                                                width: '120px',
                                                 display: 'block',
-                                                margin: 'auto'
+                                                margin: 'auto',
+                                                marginTop: '20px'
                                             }}/>
-                                    <img src="assets/images/logo.png" alt="camera icon" style={{
-                                        height: '2rem',
-                                        position: 'absolute',
-                                        top: '0',
-                                        right: '0',
-                                        margin: '0.5rem'
-                                    }}/>
+
                                 </div>
                                 <IonCardHeader>
-                                    <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
-                                    <IonCardTitle>Card Title</IonCardTitle>
+                                    <IonCardSubtitle  style={{marginTop: '10px', fontSize: '16px',textAlign: "center", color: 'white'}}>Owen Bredenhorst</IonCardSubtitle>
                                 </IonCardHeader>
-                                <IonCardContent>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur metus vel
-                                    tellus luctus, quis placerat quam vehicula.
+                                <IonCardContent style={{marginTop: '10px'}}>
+                                    <IonProgressBar buffer={0.45} style={{ height: '21px', backgroundColor: '#781F3E' }}></IonProgressBar>
+                                    <IonCardSubtitle  style={{fontSize: '10px',textAlign: "center", color: '#BFBFBF'}}>132/500 XP</IonCardSubtitle>
                                 </IonCardContent>
                             </IonCard>
                         </div>
                     </div>
+
+
+                    <IonGrid >
+                        <IonRow style={{width: '90%',  margin: '0 auto' }}>
+
+                            <IonCol size="12" size-md="8" offset-md="2" >
+                                <IonCard style={{backgroundColor: '#1E1E1E'}}>
+                                    <IonCardContent className="ion-text-center">
+                                        {/* QR Code */}
+                                        <img src="assets/images/qrcode.png" style={{ filter: "invert(1)" }} />
+                                        <IonCardSubtitle>QR CODE</IonCardSubtitle>
+                                    </IonCardContent>
+                                </IonCard>
+
+                                {/* Icon Cards */}
+                                <IonRow>
+                                    <IonCol size="6" style={{paddingRight: '5px', paddingTop: '20px'}}>
+                                        <IonCard>
+                                            <IonCardContent className="ion-text-center">
+                                                <IonRouterLink routerLink="/edit-profile">
+                                                    <IonImg src="assets/images/vlag.png" alt="hexagon image with camera icon"></IonImg>
+                                                    <IonCardSubtitle>Gegevens</IonCardSubtitle>
+                                                </IonRouterLink>
+                                            </IonCardContent>
+                                        </IonCard>
+                                    </IonCol>
+                                    <IonCol size="6" style={{paddingLeft: '5px', paddingTop: '20px'}}>
+                                        <IonCard>
+                                            <IonCardContent className="ion-text-center">
+                                                <IonRouterLink routerLink="/welcome">
+                                                    <IonImg src="assets/images/lampje.png" alt="hexagon image with camera icon"></IonImg>
+                                                    <IonCardSubtitle>Bestellingen</IonCardSubtitle>
+                                                </IonRouterLink>
+                                            </IonCardContent>
+                                        </IonCard>
+                                    </IonCol>
+
+                                    <IonCol size="6" style={{paddingRight: '5px', paddingTop: '20px'}}>
+                                        <IonCard>
+                                            <IonCardContent className="ion-text-center">
+                                                <IonRouterLink routerLink="/achievement">
+                                                    <IonImg src="assets/images/verrekijkerpng.png" alt="hexagon image with camera icon"></IonImg>
+                                                    <IonCardSubtitle>Achievement</IonCardSubtitle>
+                                                </IonRouterLink>
+                                            </IonCardContent>
+                                        </IonCard>
+                                    </IonCol>
+                                </IonRow>
+
+                            </IonCol>
+                        </IonRow>
+                    </IonGrid>
                     {/*    content komt hier dus zorg dat je in de template dit ergens anders heb*/}
 
 

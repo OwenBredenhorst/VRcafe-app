@@ -6,7 +6,7 @@
 
 body {
 
-    background-color: #1E1E1E;
+    background-color: #171618;
 }
 
 p{
@@ -116,6 +116,10 @@ form label {
 
     padding: 12px 110px;
     height: 2000px;
+}
+
+ion-content{
+    background-color: #3dc2ff !important;
 }
 
 
