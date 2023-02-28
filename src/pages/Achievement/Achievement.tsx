@@ -19,7 +19,7 @@ import {
     IonCardContent,
     IonCardSubtitle
 } from "@ionic/react";
-import { IonProgressBar } from '@ionic/react';
+import {IonProgressBar} from '@ionic/react';
 import {arrowBackOutline, cameraOutline, pencilOutline, radio} from "ionicons/icons";
 
 import "../../theme/GlobalStyling.css";
@@ -66,28 +66,100 @@ const Achievement: React.FC = () => {
                         <br/>
                     </div>
 
-                    <div className="coupon-content" >
+                    <div className="coupon-content">
 
-                    <IonCard >
-                        <div style={{ display: 'flex', flexDirection: 'row' }}>
-                            <img src="https://img.freepik.com/free-photo/man-wearing-vr-glasses-with-gradient-background_23-2148864957.jpg" alt="My Image" style={{ height: '100%', width: '30%' }} />
-                            <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
-                                <IonCardHeader style={{ flex: 1 }}>
-                                    <IonCardTitle>Achievement name</IonCardTitle>
-                                    <div style={{ fontSize: 'smaller' }}>Achievement description
-                                        and more room for it</div>
-                                </IonCardHeader>
-                                <IonCardContent style={{ flex: 1 }}>
-                                    <div style={{ position: 'relative' }}>
-                                        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#261B1B' }}>
-                                            19/20
-                                        </div>
-                                        <IonProgressBar buffer={0.25} style={{ height: '21px', backgroundColor: '#781F3E' }}></IonProgressBar>
+
+                        <div className="coupon-container">
+                            <IonCard style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '50px', width: '80%',  margin: 'auto' }}>
+                                <div style={{ display: 'flex', flexDirection: 'row' }}>
+                                    <img src="https://i0.wp.com/vrscout.com/wp-content/uploads/2022/06/GhostbustersVRAcademy_4-scaled-e1654799312342.jpg?ssl=1" alt="My Image" style={{ height: '100px', width: '30%', objectFit: 'cover' }} />
+                                    <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+                                        <IonCardHeader style={{ flex: 1, marginLeft: '19px', marginBottom: '10px' }}>
+                                            <IonCardTitle style={{ fontSize: '1.2em'}}>Achievement name</IonCardTitle>
+                                            <div style={{ fontSize: '10px' }}>Achievement description and more room for it</div>
+                                        </IonCardHeader>
+                                        <IonCardContent style={{ flex: 1 }}>
+                                            <div style={{ position: 'relative' }}>
+                                                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#261B1B' }}>
+                                                    19/20
+                                                </div>
+                                                <IonProgressBar buffer={0.45} style={{ height: '21px', backgroundColor: '#781F3E' }}></IonProgressBar>
+                                            </div>
+                                        </IonCardContent>
                                     </div>
-                                </IonCardContent>
-                            </div>
+                                </div>
+                            </IonCard>
                         </div>
-                    </IonCard>
+
+
+                        <div className="coupon-container">
+                            <IonCard style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '50px', width: '80%',  margin: 'auto' }}>
+                                <div style={{ display: 'flex', flexDirection: 'row' }}>
+                                    <img src="https://i.ytimg.com/vi/_9m4Z4waqZM/maxresdefault.jpg" alt="My Image" style={{ height: '100px', width: '30%', objectFit: 'cover' }} />
+                                    <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+                                        <IonCardHeader style={{ flex: 1, marginLeft: '19px', marginBottom: '10px' }}>
+                                            <IonCardTitle style={{ fontSize: '1.2em'}}>Achievement name</IonCardTitle>
+                                            <div style={{ fontSize: '10px' }}>Achievement description and more room for it</div>
+                                        </IonCardHeader>
+                                        <IonCardContent style={{ flex: 1 }}>
+                                            <div style={{ position: 'relative' }}>
+                                                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#261B1B' }}>
+                                                    19/20
+                                                </div>
+                                                <IonProgressBar buffer={0.45} style={{ height: '21px', backgroundColor: '#781F3E' }}></IonProgressBar>
+                                            </div>
+                                        </IonCardContent>
+                                    </div>
+                                </div>
+                            </IonCard>
+                        </div>
+
+
+                        <div className="coupon-container">
+                            <IonCard style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '50px', width: '80%',  margin: 'auto' }}>
+                                <div style={{ display: 'flex', flexDirection: 'row' }}>
+                                    <img src="https://i0.wp.com/vrscout.com/wp-content/uploads/2022/06/GhostbustersVRAcademy_4-scaled-e1654799312342.jpg?ssl=1" alt="My Image" style={{ height: '100px', width: '30%', objectFit: 'cover' }} />
+                                    <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+                                        <IonCardHeader style={{ flex: 1, marginLeft: '19px', marginBottom: '10px' }}>
+                                            <IonCardTitle style={{ fontSize: '1.2em'}}>Achievement name</IonCardTitle>
+                                            <div style={{ fontSize: '10px' }}>Achievement description and more room for it</div>
+                                        </IonCardHeader>
+                                        <IonCardContent style={{ flex: 1 }}>
+                                            <div style={{ position: 'relative' }}>
+                                                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#261B1B' }}>
+                                                    19/20
+                                                </div>
+                                                <IonProgressBar buffer={0.45} style={{ height: '21px', backgroundColor: '#781F3E' }}></IonProgressBar>
+                                            </div>
+                                        </IonCardContent>
+                                    </div>
+                                </div>
+                            </IonCard>
+                        </div>
+
+
+                        <div className="coupon-container">
+                            <IonCard style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '50px', width: '80%',  margin: 'auto' }}>
+                                <div style={{ display: 'flex', flexDirection: 'row' }}>
+                                    <img src="https://i.ytimg.com/vi/_9m4Z4waqZM/maxresdefault.jpg" alt="My Image" style={{ height: '100px', width: '30%', objectFit: 'cover' }} />
+                                    <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+                                        <IonCardHeader style={{ flex: 1, marginLeft: '19px', marginBottom: '10px' }}>
+                                            <IonCardTitle style={{ fontSize: '1.2em'}}>Achievement name</IonCardTitle>
+                                            <div style={{ fontSize: '10px' }}>Achievement description and more room for it</div>
+                                        </IonCardHeader>
+                                        <IonCardContent style={{ flex: 1 }}>
+                                            <div style={{ position: 'relative' }}>
+                                                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#261B1B' }}>
+                                                    19/20
+                                                </div>
+                                                <IonProgressBar buffer={0.45} style={{ height: '21px', backgroundColor: '#781F3E' }}></IonProgressBar>
+                                            </div>
+                                        </IonCardContent>
+                                    </div>
+                                </div>
+                            </IonCard>
+                        </div>
+
 
                     </div>
                     {/*    content komt hier dus zorg dat je in de template dit ergens anders heb*/}
@@ -99,7 +171,7 @@ const Achievement: React.FC = () => {
             {/* TODO fix name and place of files */}
             <MainTabs/>
         </IonPage>
-);
+    );
 };
 
 export default Achievement;
