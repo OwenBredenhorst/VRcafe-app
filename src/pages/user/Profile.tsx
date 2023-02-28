@@ -98,7 +98,7 @@ const Profile: React.FC = () => {
                         <IonRow style={{width: '90%',  margin: '0 auto' }}>
 
                             <IonCol size="12" size-md="8" offset-md="2" >
-                                <IonCard style={{backgroundColor: '#1E1E1E'}}>
+                                <IonCard style={{backgroundColor: '#1E1E1E', borderRadius: '19px'}}>
                                     <IonCardContent className="ion-text-center">
                                         {/* QR Code */}
                                         <img src="assets/images/qrcode.png" style={{ filter: "invert(1)" }} />
@@ -109,7 +109,7 @@ const Profile: React.FC = () => {
                                 {/* Icon Cards */}
                                 <IonRow>
                                     <IonCol size="6" style={{paddingRight: '5px', paddingTop: '20px'}}>
-                                        <IonCard>
+                                        <IonCard style={{borderRadius: '19px'}}>
                                             <IonCardContent className="ion-text-center">
                                                 <IonRouterLink routerLink="/edit-profile">
                                                     <IonImg src="assets/images/vlag.png" alt="hexagon image with camera icon"></IonImg>
@@ -119,7 +119,7 @@ const Profile: React.FC = () => {
                                         </IonCard>
                                     </IonCol>
                                     <IonCol size="6" style={{paddingLeft: '5px', paddingTop: '20px'}}>
-                                        <IonCard>
+                                        <IonCard style={{borderRadius: '19px'}}>
                                             <IonCardContent className="ion-text-center">
                                                 <IonRouterLink routerLink="/welcome">
                                                     <IonImg src="assets/images/lampje.png" alt="hexagon image with camera icon"></IonImg>
@@ -130,7 +130,7 @@ const Profile: React.FC = () => {
                                     </IonCol>
 
                                     <IonCol size="6" style={{paddingRight: '5px', paddingTop: '20px'}}>
-                                        <IonCard>
+                                        <IonCard style={{borderRadius: '19px'}}>
                                             <IonCardContent className="ion-text-center">
                                                 <IonRouterLink routerLink="/achievement">
                                                     <IonImg src="assets/images/verrekijkerpng.png" alt="hexagon image with camera icon"></IonImg>

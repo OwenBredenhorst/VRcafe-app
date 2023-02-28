@@ -106,7 +106,7 @@ const Achievement: React.FC = () => {
                                                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#261B1B' }}>
                                                     19/20
                                                 </div>
-                                                <IonProgressBar buffer={0.45} style={{ height: '21px', backgroundColor: '#781F3E' }}></IonProgressBar>
+                                                <IonProgressBar buffer={0.85} style={{ height: '21px', backgroundColor: '#781F3E' }}></IonProgressBar>
                                             </div>
                                         </IonCardContent>
                                     </div>
@@ -129,7 +129,7 @@ const Achievement: React.FC = () => {
                                                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#261B1B' }}>
                                                     19/20
                                                 </div>
-                                                <IonProgressBar buffer={0.45} style={{ height: '21px', backgroundColor: '#781F3E' }}></IonProgressBar>
+                                                <IonProgressBar buffer={0.15} style={{ height: '21px', backgroundColor: '#781F3E' }}></IonProgressBar>
                                             </div>
                                         </IonCardContent>
                                     </div>
@@ -152,7 +152,7 @@ const Achievement: React.FC = () => {
                                                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#261B1B' }}>
                                                     19/20
                                                 </div>
-                                                <IonProgressBar buffer={0.45} style={{ height: '21px', backgroundColor: '#781F3E' }}></IonProgressBar>
+                                                <IonProgressBar buffer={0.75} style={{ height: '21px', backgroundColor: '#781F3E' }}></IonProgressBar>
                                             </div>
                                         </IonCardContent>
                                     </div>
