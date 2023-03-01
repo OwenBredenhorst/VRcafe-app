@@ -29,7 +29,7 @@ const LoginPre: React.FC = () => {
             <IonContent fullscreen color="vrcafe-main">
                 <div style={{display: 'flex', justifyContent: 'center'}}>
                     <div className="content-logo">
-                        <img src="assets/images/logo.png" alt="VRcafe logo"/>
+                        <img style={{  width: '100%'}} src="assets/images/LogoAnim.gif" alt="Animation of the VRcafe logo" />
                     </div>
                 </div>
 
@@ -39,7 +39,7 @@ const LoginPre: React.FC = () => {
                             <IonImg  className="login-button-icon"  src="assets/images/logo.png" alt="Logo" style={{  marginRight: '8px', width: '37px'}} />
                            login
                         </IonButton>
-                        <IonButton  href="/welcome" className="login-button">
+                        <IonButton  href="/welcome" className="login-button" style={{borderRadius: '50px'}}>
                             <IonIcon slot="start" style={{marginRight: '8px'}} icon={logoFacebook} />
                             Login with Facebook
                         </IonButton>

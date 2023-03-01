@@ -34,6 +34,7 @@ const Onboarding: React.FC = () => {
     <IonPage>
       <IonHeader class="ion-no-border">
         <IonToolbar color="vrcafe-main">
+
           <IonTitle ></IonTitle>
           <IonButtons slot="end">
             <IonButton href="/login-pre">Skip</IonButton>
@@ -51,7 +52,7 @@ const Onboarding: React.FC = () => {
                   VRcafe, Let’s play!</p>
               </div>
               <div className="navigator">
-                <SlideNextButton />
+                <SlideNextButton  />
               </div>
             </div>
           </SwiperSlide>
@@ -64,7 +65,7 @@ const Onboarding: React.FC = () => {
                 </p>
               </div>
               <div className="navigator">
-                <IonButton href="/login-pre" fill="clear" className="slider-next">Volgende</IonButton>
+                <IonButton href="/login-pre" fill="clear" className="slider-next"  style={{backgroundColor: "#37F2A9"}}>Volgende</IonButton>
                 {/*<SlideNextButton></SlideNextButton>*/}
               </div>
             </div>
