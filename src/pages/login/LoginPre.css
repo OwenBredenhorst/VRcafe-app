@@ -43,6 +43,7 @@
     margin-top: 20px;
     height: 6vh;
     font-size: 16px;
+    --border-radius: 18px !important;
 }
 
 .login-button-main {
@@ -52,16 +53,19 @@
     height: 6vh;
     color: black;
     font-size: 16px;
+    --border-radius: 18px !important;
 
 
 }
 
-.login-form{
+.login-form-pre{
     text-align: center;
     width: 80% ;
-    margin-top: 220px;
+    margin-top: 15%;
 
 }
+
+
 
 .login-form p{
 

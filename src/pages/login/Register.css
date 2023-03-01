@@ -39,17 +39,6 @@
 
 
 
-.login-button-main {
-    --background: #37F2A9 !important;
-    width: 100%;
-    margin-top: 20px;
-    height: 6vh;
-    color: black;
-    font-size: 16px;
-
-
-}
-
 .register-form-submit{
 
     text-align: center;
@@ -57,12 +46,7 @@
     margin-top: 100px;
 }
 
-.login-form{
 
-    text-align: center;
-    width: 80% ;
-    margin-top: 220px;
-}
 
 .login-form p{
 

@@ -1,4 +1,15 @@
-import { IonContent, IonPage, IonLabel, IonInput, IonButton, IonHeader, IonTitle, IonButtons, IonToolbar } from "@ionic/react";
+import {
+  IonContent,
+  IonPage,
+  IonLabel,
+  IonInput,
+  IonButton,
+  IonHeader,
+  IonTitle,
+  IonButtons,
+  IonToolbar,
+  IonImg, IonIcon
+} from "@ionic/react";
 
 import "./Onboarding.css";
 
@@ -28,6 +39,8 @@ import "@ionic/react/css/text-alignment.css";
 import "@ionic/react/css/text-transformation.css";
 import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
+import {logoFacebook, logoGoogle} from "ionicons/icons";
+import React from "react";
 
 const Onboarding: React.FC = () => {
   return (
@@ -56,6 +69,7 @@ const Onboarding: React.FC = () => {
               </div>
             </div>
           </SwiperSlide>
+
           <SwiperSlide>
             <div className="slideContent slide2">
               <img src="assets/images/LogoAnim.gif" alt="Animation of the VRcafe logo" />
@@ -66,6 +80,36 @@ const Onboarding: React.FC = () => {
               </div>
               <div className="navigator">
                 <IonButton href="/login-pre" fill="clear" className="slider-next"  style={{backgroundColor: "#37F2A9"}}>Volgende</IonButton>
+                {/*<SlideNextButton></SlideNextButton>*/}
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="slideContent slide3">
+              <img src="assets/images/LogoAnim.gif" alt="Animation of the VRcafe logo" />
+                <div className="parent-container">
+                  <div className="login-form-pre" >
+                      <h1 style={{textAlign:"left", fontSize: ''}}>Login</h1>
+                      <p style={{textAlign:"left", fontSize: ''}}>Om het meeste uit je app te halen!</p>
+
+                          <IonButton href="/login" className="login-button-main"   >
+                      <IonImg  className="login-button-icon"  src="assets/images/logo.png" alt="Logo" style={{  marginRight: '8px', width: '37px'}} />
+                      login
+                    </IonButton>
+                    <IonButton  href="/welcome" className="login-button" style={{borderRadius: '50px', color: 'white'}}>
+                      <IonIcon  slot="start" style={{marginRight: '8px', color: 'white', textAlign:"left"}} icon={logoFacebook} />
+                      Login with Facebook
+                    </IonButton>
+                    <IonButton href="/welcome" style={{borderRadius: '50px', color: 'white' }} className="login-button">
+                      <IonIcon  slot="start" style={{marginRight: '8px', color: 'white'}}  icon={logoGoogle} />
+                      Login with Google
+                    </IonButton>
+                    {/*<p  style={{color: '#A7A7A7', fontSize: '13px'}}>Or Sign-up</p>*/}
+                  </div>
+                </div>
+
+              <div className="navigator">
                 {/*<SlideNextButton></SlideNextButton>*/}
               </div>
             </div>
