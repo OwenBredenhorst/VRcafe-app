@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {
     IonContent,
     IonHeader,
@@ -27,25 +27,53 @@ import UserService from "../../services/UserService";
 
 import MainTabs from "../../components/MainTabs";
 
-
 const Welcome: React.FC = () => {
     const [content, setContent] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const observer = useRef<IntersectionObserver>();
+
+    const loadMore = async () => {
+        if (isLoading) return;
+
+        setIsLoading(true);
+        try {
+
+        } catch (error) {
+
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+        const target = entries[0];
+        if (target.isIntersecting) {
+            loadMore();
+        }
+    };
 
     useEffect(() => {
-        UserService.getUser()
-            .then((response) => {
-                // axios creates a data object on its own. back-end also contains a data object so it becomes data.data
-                setContent(response.data.data);
-            })
-            .catch((error) => {
-                console.log(error.toJSON());
-            });
+        observer.current = new IntersectionObserver(handleIntersection, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 1.0,
+        });
+
+        if (observer.current) {
+            observer.current.observe(document.querySelector('#intersection-target')!);
+        }
+
+        return () => {
+            if (observer.current) {
+                observer.current.disconnect();
+            }
+        };
     }, []);
 
     return (
         <IonPage>
-            <IonContent fullscreen color="vrcafe-main">
-                <IonContent className="back-drop-background">
+            <IonContent>
+                <IonContent className="back-drop-background" id="intersection-target">
                     <div className="back-drop">
                         <div className="back-drop-left">
                             <div className="logo-top-nav">

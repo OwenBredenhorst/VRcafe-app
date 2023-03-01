@@ -128,7 +128,7 @@ input[type=text]{
 
 
 ion-content{
-    background-color: #3dc2ff !important;
+    --background-color: #3dc2ff !important;
 }
 
 
