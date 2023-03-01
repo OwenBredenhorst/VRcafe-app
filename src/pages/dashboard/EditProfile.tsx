@@ -60,49 +60,28 @@ const EditProfile: React.FC = () => {
                     {/*    content komt hier dus zorg dat je in de template dit ergens anders heb*/}
 
 
-                    <div>
-                        <form className="account-info-form">
+                    <div className="parent-container">
+                        <div className="register-form-submit">
+                            <h1>Registeren</h1>
+                            <br/> <br/> <br/>
+                            <IonInput required className="edit-input" placeholder="Gebruikers naam" type="text"></IonInput>
+                            <IonInput required className="edit-input" placeholder="Wachtwoord" type="text"></IonInput>
+                            <IonInput required className="edit-input" placeholder="Herhaal wachtwoord" type="text"></IonInput>
 
-                            <IonItem lines="none" color="vrcafe-main">
-                                <IonInput className="input-form" placeholder="OwenBredenhorst" name="username" required>
-                                    {/*<IonIcon icon={pencilOutline}></IonIcon>*/}
-                                </IonInput>
-                            </IonItem>
-
-
-                            <div>
-                                <IonInput className="login-form" placeholder="**********************" type="password" name="password"
-                                          required></IonInput>
-                            </div>
-                            <div className="login-form">
-                                <IonInput placeholder="OwenBredenhorst@gmail.com" type="email" name="email"
-                                          required></IonInput>
-                            </div>
-                            <div className="firstNameLast">
-                                <div className="register-form">
-                                    <IonInput placeholder="Owen" type="text" name="firstName" autocapitalize="on"
-                                              required></IonInput>
-                                </div>
-                                <div className="register-form">
-                                    <IonInput placeholder="Bredenhorst" type="text" name="lastName" autocapitalize="on"
-                                              required></IonInput>
-                                </div>
-                            </div>
-                            <div className="login-form">
-                                <IonDatetime className="test" color="dark" presentation="date"></IonDatetime>
-                            </div>
-                            <div className="ion-text-center">
-                                <IonButton type="submit" fill="clear" className="form-submit">Save</IonButton>
+                            <div style={{display: 'flex'}}>
+                                <IonInput required className="edit-input" placeholder="Voornaam" type="text"></IonInput>
+                                <IonInput required style={{ marginLeft: '5px'}} className="edit-input" placeholder="Achternaam" type="text"></IonInput>
                             </div>
 
-                            <IonFooter>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                            </IonFooter>
-                        </form>
+                            <IonInput className="edit-input" placeholder="Leeftijd" type="number"></IonInput>
+
+                            <IonButton href="/welcome" fill="clear" className="slider-next"
+                                       style={{marginTop: '90px', border: '25px'}}>Save</IonButton>
+
+                        </div>
                     </div>
+
+
                 </IonContent>
             </IonContent>
 

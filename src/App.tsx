@@ -39,6 +39,7 @@ import Register from "./pages/login/Register";
 import Profile from "./pages/user/Profile";
 import Coupon from "./pages/coupon/Coupon";
 import Achievement from "./pages/achievement/Achievement";
+import Order from "./pages/orders/Order";
 
 
 setupIonicReact();
@@ -67,6 +68,7 @@ const App: React.FC = () => (
                     <Route path="/register" component={Register} exact={true}/>
                     <Route path="/coupon" component={Coupon} exact={true}/>
                     <Route path="/achievement" component={Achievement} exact={true}/>
+                    <Route path="/order" component={Order} exact={true}/>
 
                     <Route path="/admin" component={Admin} exact={true}/>
                     <Route path="/edit-profile" component={EditProfile} exact={true}/>

@@ -1,48 +1,25 @@
 import React, {useEffect, useState} from "react";
 import {
     IonContent,
-    IonHeader,
     IonPage,
-    IonIcon,
-    IonButton,
-    IonToolbar,
-    IonButtons,
     IonImg,
-    IonLabel,
-    IonInput,
-    IonDatetime,
-    IonFooter,
-    IonItem,
     IonCard,
     IonCardHeader,
-    IonCardTitle,
     IonCardContent,
     IonCardSubtitle,
     IonRow,
     IonCol,
     IonGrid, IonRouterLink, IonProgressBar
 } from "@ionic/react";
-import {arrowBackOutline, cameraOutline, pencilOutline, radio} from "ionicons/icons";
 
 import "../../theme/GlobalStyling.css";
-
-import UserService from "../../services/UserService";
 
 import MainTabs from "../../components/MainTabs";
 
 const Profile: React.FC = () => {
     const [content, setContent] = useState([]);
 
-    useEffect(() => {
-        UserService.getUser()
-            .then((response) => {
-                // axios creates a data object on its own. back-end also contains a data object so it becomes data.data
-                setContent(response.data.data);
-            })
-            .catch((error) => {
-                console.log(error.toJSON());
-            });
-    }, []);
+
 
     return (
         <IonPage>
@@ -121,7 +98,7 @@ const Profile: React.FC = () => {
                                     <IonCol size="6" style={{paddingLeft: '5px', paddingTop: '20px'}}>
                                         <IonCard style={{borderRadius: '19px'}}>
                                             <IonCardContent className="ion-text-center">
-                                                <IonRouterLink routerLink="/welcome">
+                                                <IonRouterLink routerLink="/order">
                                                     <IonImg src="assets/images/lampje.png" alt="hexagon image with camera icon"></IonImg>
                                                     <IonCardSubtitle>Bestellingen</IonCardSubtitle>
                                                 </IonRouterLink>
