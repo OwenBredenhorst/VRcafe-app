@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+a, u {
+    text-decoration: none;
+}
+
 body {
 
     background-color: #171618;
@@ -46,8 +50,6 @@ input::placeholder {
     color: white !important;
     font-weight: bold !important;
     text-align: left;
-
-
 }
 
 .form-submit {
@@ -117,6 +119,13 @@ form label {
     padding: 12px 110px;
     height: 2000px;
 }
+
+
+input[type=text]{
+    margin-left: 10px;
+    text-align: left !important;
+}
+
 
 ion-content{
     background-color: #3dc2ff !important;

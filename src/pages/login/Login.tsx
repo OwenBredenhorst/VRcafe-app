@@ -1,23 +1,13 @@
 import React, {useEffect, useState} from "react";
 import {
     IonContent,
-    IonHeader,
     IonPage,
-    IonIcon,
     IonButton,
-    IonToolbar,
-    IonButtons,
-    IonImg,
     IonLabel, IonInput, IonDatetime, IonFooter, IonItem
 } from "@ionic/react";
-import {arrowBackOutline, cameraOutline, logoFacebook, logoGoogle, pencilOutline, radio} from "ionicons/icons";
 import "./Login.css";
 import "../../theme/GlobalStyling.css";
 
-import UserService from "../../services/UserService";
-
-import MainTabs from "../../components/MainTabs";
-import SlideNextButton from "../../components/slider/Slider";
 
 
 const LoginPre: React.FC = () => {
@@ -35,11 +25,11 @@ const LoginPre: React.FC = () => {
 
                 <div className="parent-container">
                     <div className="login-form-submit" >
-                            <h1>Login</h1>
+                            <h1 style={{textAlign: "left", color: '#D2CFCF', fontSize: '40px'}}>Login</h1>
                                 <IonInput className="login-input" placeholder=" Username" type="text" ></IonInput>
                                 <IonInput className="login-input" placeholder="Password" type="text" ></IonInput>
-                            <p>Wachtwoord vergeten</p>
-                            <IonButton href="/welcome" fill="clear" className="slider-next" style={{  marginTop: '90px', border: '25px'}}>Login</IonButton>
+                            <p style={{textAlign: "left", color: '#D2CFCF', fontSize: '13px', padding: '10px'}}>Wachtwoord vergeten</p>
+                            <IonButton href="/welcome" fill="clear" className="slider-next" style={{  marginTop: '90px', border: '25px', textAlign: "center"}}>Login</IonButton>
                         <a href="/register"><p>Geen account? maak er een!</p></a>
                     </div>
                 </div>

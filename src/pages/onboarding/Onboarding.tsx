@@ -50,7 +50,7 @@ const Onboarding: React.FC = () => {
 
           <IonTitle ></IonTitle>
           <IonButtons slot="end">
-            <IonButton href="/login-pre">Skip</IonButton>
+            {/*<IonButton href="/login-pre">Skip</IonButton>*/}
           </IonButtons>
         </IonToolbar>
       </IonHeader>
@@ -79,8 +79,8 @@ const Onboarding: React.FC = () => {
                 </p>
               </div>
               <div className="navigator">
-                <IonButton href="/login-pre" fill="clear" className="slider-next"  style={{backgroundColor: "#37F2A9"}}>Volgende</IonButton>
-                {/*<SlideNextButton></SlideNextButton>*/}
+                {/*<IonButton href="/login-pre" fill="clear" className="slider-next"  style={{backgroundColor: "#37F2A9"}}>Volgende</IonButton>*/}
+                <SlideNextButton></SlideNextButton>
               </div>
             </div>
           </SwiperSlide>
