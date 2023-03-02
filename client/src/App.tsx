@@ -38,8 +38,8 @@ import Login from "./pages/login/Login";
 import Register from "./pages/login/Register";
 import Profile from "./pages/user/Profile";
 import Coupon from "./pages/coupon/Coupon";
-import Achievement from "./pages/achievement/Achievement";
 import Order from "./pages/orders/Order";
+import Achievement from "./pages/Achievement/Achievement";
 
 
 setupIonicReact();
