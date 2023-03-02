@@ -3,23 +3,13 @@ import { IonContent, IonHeader, IonPage, IonIcon, IonButton, IonToolbar, IonFabB
 import { camera } from "ionicons/icons";
 import "./Admin.css";
 
-import UserService from "../../services/UserService";
 
 import Greeting from "../../components/Greeting";
 
 const Admin: React.FC = () => {
   const [content, setContent] = useState([]);
 
-  useEffect(() => {
-    UserService.getUser()
-      .then((response) => {
-        // axios creates a data object on its own. back-end also contains a data object so it becomes data.data
-        setContent(response.data.data);
-      })
-      .catch((error) => {
-        console.log(error.toJSON());
-      });
-  }, []);
+
 
   return (
     <IonPage>

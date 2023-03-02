@@ -40,9 +40,25 @@ import "@ionic/react/css/text-transformation.css";
 import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
 import {logoFacebook, logoGoogle} from "ionicons/icons";
-import React from "react";
+import React, {useEffect, useState} from "react";
+import {getAllUser} from "../../services/UserService";
+
+
 
 const Onboarding: React.FC = () => {
+
+
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    getAllUser()
+        .then(data => {
+          setItems(data);
+          console.log(data); // Log the items to the console
+        })
+        .catch(error => console.error(error));
+  }, []);
+
   return (
     <IonPage>
       <IonHeader class="ion-no-border">

@@ -14,23 +14,13 @@ import {arrowBackOutline, cameraOutline, pencilOutline, radio} from "ionicons/ic
 import "./EditProfile.css";
 import "../../theme/GlobalStyling.css";
 
-import UserService from "../../services/UserService";
 
 import MainTabs from "../../components/MainTabs";
 
 const EditProfile: React.FC = () => {
     const [content, setContent] = useState([]);
 
-    useEffect(() => {
-        UserService.getUser()
-            .then((response) => {
-                // axios creates a data object on its own. back-end also contains a data object so it becomes data.data
-                setContent(response.data.data);
-            })
-            .catch((error) => {
-                console.log(error.toJSON());
-            });
-    }, []);
+
 
     return (
         <IonPage>

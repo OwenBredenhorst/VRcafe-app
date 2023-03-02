@@ -23,6 +23,7 @@ public class UserDAO implements DAO<User> {
 
 
         save(new User(null, "Emma", "Johnson", "emma_johnson", "emma@gmail.com", "p4ssword", "emmaimg.png"));
+        save(new User(null, "admin", "admin", "admin_admin", "admin@gmail.com", "admin", "emmaimg.png"));
         save(new User(null, "Max", "Smith", "max_smithy", "maxsmith@gmail.com", "maxpassword", "maximg.png"));
         save(new User(null, "Sophie", "Davis", "sophiedavis", "sophie.davis@gmail.com", "sophie123", "sophieimg.png"));
         save(new User(null, "Oliver", "Jones", "oliverjones", "ojones@gmail.com", "oliver456", "oliverimg.png"));

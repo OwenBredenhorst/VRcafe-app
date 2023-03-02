@@ -23,52 +23,13 @@ import {arrowBackOutline, cameraOutline, pencilOutline, radio} from "ionicons/ic
 import "./Welcome.css";
 import "../../theme/GlobalStyling.css";
 
-import UserService from "../../services/UserService";
-
 import MainTabs from "../../components/MainTabs";
 
 const Welcome: React.FC = () => {
-    const [content, setContent] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-    const observer = useRef<IntersectionObserver>();
 
-    const loadMore = async () => {
-        if (isLoading) return;
-
-        setIsLoading(true);
-        try {
-
-        } catch (error) {
-
-        } finally {
-            setIsLoading(false);
-        }
-    };
-
-    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-        const target = entries[0];
-        if (target.isIntersecting) {
-            loadMore();
-        }
-    };
-
-    useEffect(() => {
-        observer.current = new IntersectionObserver(handleIntersection, {
-            root: null,
-            rootMargin: '0px',
-            threshold: 1.0,
-        });
-
-        if (observer.current) {
-            observer.current.observe(document.querySelector('#intersection-target')!);
-        }
-
-        return () => {
-            if (observer.current) {
-                observer.current.disconnect();
-            }
-        };
-    }, []);
+    function test(){
+        console.log(sessionStorage.getItem("userInfo", ))
+    }
 
     return (
         <IonPage>
@@ -80,13 +41,13 @@ const Welcome: React.FC = () => {
                                 <img src="assets/images/logo.png" alt="VRcafe logo"
                                      style={{alignSelf: "center"}}/>
                             </div>
-                            <p>Goedenavond, Owen 👋</p>
+                            <p>Goedenavond, {JSON.parse(sessionStorage.userInfo)?.firstName ?? ''} 👋</p>
                             <h2>Wat is er vandaag nieuw?</h2>
                         </div>
 
                         <div className="back-drop-right">
                             {/*<IonImg src={"assets/images/pf-logo.png"} alt="cur" style={{ alignSelf: 'center'}} />*/}
-                            <img src="assets/images/pf-logo.png"/>
+                            <img onClick={test} src="assets/images/pf-logo.png"/>
                         </div>
                     </div>
 

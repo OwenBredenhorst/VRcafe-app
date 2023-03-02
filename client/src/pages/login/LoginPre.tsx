@@ -14,7 +14,7 @@ import {arrowBackOutline, cameraOutline, logoFacebook, logoGoogle, pencilOutline
 import "./LoginPre.css";
 import "../../theme/GlobalStyling.css";
 
-import UserService from "../../services/UserService";
+
 
 import MainTabs from "../../components/MainTabs";
 import SlideNextButton from "../../components/slider/Slider";

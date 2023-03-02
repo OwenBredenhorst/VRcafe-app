@@ -5,23 +5,10 @@ import "./Home.css";
 import MainTabs from "../../components/MainTabs";
 import Modal from "../../components/modal/Modal";
 
-import UserService from "../../services/UserService";
-import Greeting from "../../components/Greeting";
-
 
 const Home: React.FC = () => {
   const [content, setContent] = useState([]);
 
-  useEffect(() => {
-    UserService.getUser()
-      .then((response) => {
-        // axios creates a data object on its own. back-end also contains a data object so it becomes data.data
-        setContent(response.data.data);
-      })
-      .catch((error) => {
-        console.log(error.toJSON());
-      });
-  }, []);
 
   return (
     <IonPage>
