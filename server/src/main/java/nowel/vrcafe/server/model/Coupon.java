@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  *
- * Class for all the Post attributes
+ * Class for all the Coupon attributes
  *
  * @author  Owen Bredenhorst
  * @version 1.0
@@ -16,25 +16,24 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 
 @Entity
-public class Post {
+public class Coupon {
 
     private static final AtomicInteger idGenerator = new AtomicInteger(0);
     @Id
     @GeneratedValue
     private Integer id;
-    private String title;
+    private String amount;
     private String description;
-    private String img;
+    private String kind;
+    private String barcode;
 
-
-    public Post(Integer id, String title, String description, String img) {
+    public Coupon(Integer id, String amount, String description, String kind, String barcode) {
         this.id = id;
-        this.title = title;
+        this.amount = amount;
         this.description = description;
-        this.img = img;
+        this.kind = kind;
+        this.barcode = barcode;
     }
-
-    public Post() {}
 
     public Integer getId() {
         return id;
@@ -44,12 +43,12 @@ public class Post {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getAmount() {
+        return amount;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setAmount(String amount) {
+        this.amount = amount;
     }
 
     public String getDescription() {
@@ -60,11 +59,19 @@ public class Post {
         this.description = description;
     }
 
-    public String getImg() {
-        return img;
+    public String getKind() {
+        return kind;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setKind(String kind) {
+        this.kind = kind;
+    }
+
+    public String getBarcode() {
+        return barcode;
+    }
+
+    public void setBarcode(String barcode) {
+        this.barcode = barcode;
     }
 }

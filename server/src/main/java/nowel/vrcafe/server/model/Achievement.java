@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  *
- * Class for all the Post attributes
+ * Class for all the Achievement attributes
  *
  * @author  Owen Bredenhorst
  * @version 1.0
@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 
 @Entity
-public class Post {
+public class Achievement {
 
     private static final AtomicInteger idGenerator = new AtomicInteger(0);
     @Id
@@ -26,15 +26,14 @@ public class Post {
     private String description;
     private String img;
 
-
-    public Post(Integer id, String title, String description, String img) {
+    public Achievement(Integer id, String title, String description, String img) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.img = img;
     }
 
-    public Post() {}
+    public Achievement() {}
 
     public Integer getId() {
         return id;
@@ -68,3 +67,6 @@ public class Post {
         this.img = img;
     }
 }
+
+
+

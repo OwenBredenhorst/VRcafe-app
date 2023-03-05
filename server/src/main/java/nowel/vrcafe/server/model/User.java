@@ -15,7 +15,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Entity
 public class  User {
 
-
     private static final AtomicInteger idGenerator = new AtomicInteger(0);
     @Id
     @GeneratedValue
