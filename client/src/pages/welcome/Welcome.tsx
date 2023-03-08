@@ -39,8 +39,6 @@ const Welcome: React.FC = () => {
 
     useEffect(() => {
 
-
-
         getAllPost()
             .then(data => {
                 setPost(data);
