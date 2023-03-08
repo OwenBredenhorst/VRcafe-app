@@ -2,11 +2,7 @@ package nowel.vrcafe.server.controller;
 
 import nowel.vrcafe.server.exeption.UserNotFoundExeption;
 import nowel.vrcafe.server.model.Coupon;
-import nowel.vrcafe.server.model.Order;
-import nowel.vrcafe.server.model.User;
 import nowel.vrcafe.server.repository.CouponDAO;
-import nowel.vrcafe.server.repository.OrderDAO;
-import nowel.vrcafe.server.repository.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * OrderController for all the Mapping
+ * CouponController for all the Mapping
  *
  * @author Owen Bredenhorst
  * @version 1.0
@@ -24,46 +20,46 @@ import java.util.List;
  */
 
 @RestController
-public class CouponController {
+public class OrderController {
 
     @Autowired
-    private OrderDAO repo;
+    private CouponDAO repo;
 
 
 
     /**
-     * Get all orders from the database and return them as a list of User objects.
+     * Get all users from the database and return them as a list of User objects.
      *
      * @return A list of all users in the database.
      */
-    @GetMapping("/orders")
+    @GetMapping("/coupons")
     @CrossOrigin(origins = "http://localhost:3000/")
-    public List<Order> getAll() {
+    public List<Coupon> getAll() {
         return repo.getAll();
     }
 
 
 
     /**
-     * If the orders is not found, then create a new user with the next available id
+     * If the user is not found, then create a new user with the next available id
      *
      * @param id The id of the user we want to retrieve.
      * @return A user object
      */
-    @GetMapping("/orders/{id}")
+    @GetMapping("/coupon/{id}")
     @CrossOrigin(origins = "http://localhost:3000/")
-    public Order getUserById(
+    public Coupon getUserById(
             @PathVariable int id) {
 
-        Order o = repo.findByID(id);
-        if (o.getId() == 0) {
+        Coupon coupon = repo.findByID(id);
+        if (coupon.getId() == 0) {
             int lastUserIndex = getAll().size() - 1;
-            Order last = repo.findByID(lastUserIndex);
+            Coupon last = repo.findByID(lastUserIndex);
             int uniqueId = last.getId() + 1;
-            o.setId(uniqueId);
+            coupon.setId(uniqueId);
             throw new UserNotFoundExeption("id = " + id);
         }
-        return o;
+        return coupon;
     }
 
 
