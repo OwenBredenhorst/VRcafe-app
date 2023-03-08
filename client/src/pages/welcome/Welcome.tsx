@@ -24,11 +24,55 @@ import "./Welcome.css";
 import "../../theme/GlobalStyling.css";
 
 import MainTabs from "../../components/MainTabs";
+import {getAllUser} from "../../services/UserService";
+import {getAllPost} from "../../services/PostService";
+import {Post} from "../../models/Post";
 
 const Welcome: React.FC = () => {
 
-    function test(){
-        console.log(sessionStorage.getItem("userInfo", ))
+    const [items, setPost] = useState<Post[]>([]);
+    const [startIndex, setStartIndex] = useState<number>(0);
+    const [endIndex, setEndIndex] = useState<number>(4);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const contentRef = useRef<HTMLIonContentElement>(null);
+    const lastCardRef = useRef<HTMLIonCardElement | null>(null);
+
+    useEffect(() => {
+
+
+
+        getAllPost()
+            .then(data => {
+                setPost(data);
+                console.log(data); // Log the items to the console
+            })
+            .catch(error => console.error(error));
+    }, []);
+
+    useEffect(() => {
+        function handleScroll() {
+            const content = contentRef.current;
+            if (content) {
+                const { scrollTop, scrollHeight, clientHeight } = content;
+                if (scrollTop + clientHeight >= scrollHeight - 100) {
+                    setIsLoading(true);
+                    setTimeout(() => {
+                        setStartIndex((prevStartIndex) => prevStartIndex + 5);
+                        setEndIndex((prevEndIndex) => prevEndIndex + 5);
+                        setIsLoading(false);
+                    }, 1000);
+                }
+            }
+        }
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    function test() {
+        console.log(sessionStorage.getItem("userInfo",))
+
     }
 
     return (
@@ -47,7 +91,8 @@ const Welcome: React.FC = () => {
 
                         <div className="back-drop-right">
                             {/*<IonImg src={"assets/images/pf-logo.png"} alt="cur" style={{ alignSelf: 'center'}} />*/}
-                            <img onClick={test} src="assets/images/pf-logo.png"/>
+                            <img src={JSON.parse(sessionStorage.userInfo)?.img ?? "assets/images/pf-logo.png"}
+                                 onClick={test}/>
                         </div>
                     </div>
 
@@ -55,54 +100,19 @@ const Welcome: React.FC = () => {
                         <br/>
                     </div>
 
-                    <div className="card-content">
-                        <div className="card-container">
-                            <IonCard >
-                                <IonImg src="https://www.vrcafehaarlem.nl/wp-content/uploads/2021/06/vrcafe-1.jpeg" />
-                                <IonCardHeader>
-                                    <IonCardTitle className="card-title">Title of the Card</IonCardTitle>
-                                </IonCardHeader>
-                                <IonCardContent  className="card-p">
-                                    Here is some information text about the card. It can be multiple lines long.
-                                </IonCardContent>
-                            </IonCard>
+                    <div className="card-content" style={{ width: "100%", height: "600px" }}>
+                        <div className="card-container" style={{ marginLeft: "10%", marginTop: "2em", width: "100%", height: "200px" }}>
+                            {items.map((item) => (
+                                <IonCard style={{ marginTop: "2em" }} key={item.id}>
+                                    <IonImg src={item.img} />
+                                    <IonCardHeader>
+                                        <IonCardTitle className="card-title">{item.title}</IonCardTitle>
+                                    </IonCardHeader>
+                                    <IonCardContent className="card-p">{item.description}</IonCardContent>
+                                </IonCard>
+                            ))}
                         </div>
-
-                        <div className="card-container">
-                            <IonCard >
-                                <IonImg src="https://1001.pics/img/369x175x2/listings/bd702b5b-c5ee-4b00-8a97-83b5777ecc35/900x600/vr-racen.fpcaee0627.webp" />
-                                <IonCardHeader>
-                                    <IonCardTitle className="card-title">Title of the Card</IonCardTitle>
-                                </IonCardHeader>
-                                <IonCardContent  className="card-p">
-                                    Here is some information text about the card. It can be multiple lines long.
-                                </IonCardContent>
-                            </IonCard>
-                        </div>
-
-
-                        <div className="card-container">
-                            <IonCard >
-                                <IonImg src="https://image.coolblue.nl/624x351/content/875572a05d5dea6ba27785e1abc71203" />
-                                <IonCardHeader>
-                                    <IonCardTitle className="card-title">Title of the Card</IonCardTitle>
-                                </IonCardHeader>
-                                <IonCardContent  className="card-p">
-                                    Here is some information text about the card. It can be multiple lines long.
-                                </IonCardContent>
-                            </IonCard>
-                        </div>
-
-
-
                     </div>
-
-
-
-
-                    {/*    content komt hier dus zorg dat je in de template dit ergens anders heb*/}
-
-
 
                 </IonContent>
             </IonContent>

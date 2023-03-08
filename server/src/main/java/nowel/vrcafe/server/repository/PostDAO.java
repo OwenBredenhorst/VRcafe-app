@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
 
 /**
  *
@@ -30,7 +31,14 @@ public class PostDAO implements DAO<Post> {
     }
 
     private void generateUser() {
+        Random rand = new Random();
 
+        for (int i = 1; i <= 2; i++) {
+            String title = "Title " + i + " of card";
+            String description = "This is a description of post " + i;
+            String imageUrl = "https://www.vrcafehaarlem.nl/wp-content/uploads/2021/06/vrcafe-1.jpeg";
+            save(new Post(null, title, description, imageUrl));
+        }
     }
 
     /**

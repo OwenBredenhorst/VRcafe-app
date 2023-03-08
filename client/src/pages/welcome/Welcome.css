@@ -96,15 +96,21 @@
 
 }
 .card-content{
-    margin-bottom: 20px;
-    margin-top: 22vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-container {
 
-    margin-top: 2vh;
-    display: flex;
+    /*margin-top: 2vh;*/
+    /*display: flex;*/
     justify-content: center;
+
+
+
+
+    align-items: center;
 
 }
 

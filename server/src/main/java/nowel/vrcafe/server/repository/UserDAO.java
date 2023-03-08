@@ -21,18 +21,17 @@ public class UserDAO implements DAO<User> {
 
     private void generateUser() {
 
-
-        save(new User(null, "Emma", "Johnson", "emma_johnson", "emma@gmail.com", "p4ssword", "emmaimg.png"));
-        save(new User(null, "admin", "admin", "admin_admin", "admin@gmail.com", "admin", "emmaimg.png"));
-        save(new User(null, "Max", "Smith", "max_smithy", "maxsmith@gmail.com", "maxpassword", "maximg.png"));
-        save(new User(null, "Sophie", "Davis", "sophiedavis", "sophie.davis@gmail.com", "sophie123", "sophieimg.png"));
-        save(new User(null, "Oliver", "Jones", "oliverjones", "ojones@gmail.com", "oliver456", "oliverimg.png"));
-        save(new User(null, "Ava", "Taylor", "avataylor", "ava.taylor@gmail.com", "taylorpass", "avaimg.png"));
-        save(new User(null, "William", "Wilson", "williamwilson", "wwilson@gmail.com", "wilson1234", "williamimg.png"));
-        save(new User(null, "Emily", "Martin", "emily_martin", "emartin@gmail.com", "emilypass", "emilyimg.png"));
-        save(new User(null, "Benjamin", "Moore", "benmoore", "benjamin.moore@gmail.com", "moorepass", "benimg.png"));
-        save(new User(null, "Charlotte", "Garcia", "charlotteg", "charlotte.garcia@gmail.com", "charlotte123", "charlotteimg.png"));
-        save(new User(null, "Lucas", "Rodriguez", "lucasr", "lucas.rodriguez@gmail.com", "rodriguezpass", "lucasimg.png"));
+        save(new User(null, "Emma", "Johnson", "emma_johnson", "emma@gmail.com", "p4ssword", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
+        save(new User(null, "admin", "admin", "admin_admin", "admin@gmail.com", "admin", "https://avatars.githubusercontent.com/u/119951456?v=4.png"));
+        save(new User(null, "Max", "Smith", "max_smithy", "maxsmith@gmail.com", "maxpassword", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
+        save(new User(null, "Sophie", "Davis", "sophiedavis", "sophie.davis@gmail.com", "sophie123", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
+        save(new User(null, "Oliver", "Jones", "oliverjones", "ojones@gmail.com", "oliver456", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
+        save(new User(null, "Ava", "Taylor", "avataylor", "ava.taylor@gmail.com", "taylorpass", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
+        save(new User(null, "William", "Wilson", "williamwilson", "wwilson@gmail.com", "wilson1234", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
+        save(new User(null, "Emily", "Martin", "emily_martin", "emartin@gmail.com", "emilypass", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
+        save(new User(null, "Benjamin", "Moore", "benmoore", "benjamin.moore@gmail.com", "moorepass", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
+        save(new User(null, "Charlotte", "Garcia", "charlotteg", "charlotte.garcia@gmail.com", "charlotte123", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
+        save(new User(null, "Lucas", "Rodriguez", "lucasr", "lucas.rodriguez@gmail.com", "rodriguezpass", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
 
     }
 
