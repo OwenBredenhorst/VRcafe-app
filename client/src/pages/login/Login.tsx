@@ -64,7 +64,7 @@ const LoginPre: React.FC = () => {
 
                     <div className="login-form-submit">
                         <h1 style={{textAlign: "left", color: '#D2CFCF', fontSize: '40px'}}>Login</h1>
-                        <IonInput id="email-input" className="login-input" placeholder=" Username" type="text"/>
+                        <IonInput id="email-input" className="login-input" placeholder="Email" type="text"/>
                         <IonInput id="password-input" className="login-input" placeholder="Password" type="text"/>
                         <p style={{textAlign: "left", color: '#D2CFCF', fontSize: '13px', padding: '10px'}}>Wachtwoord
                             vergeten</p>

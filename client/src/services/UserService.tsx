@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // const BASE_URL = process.env.REACT_APP_API;
-const BASE_URL = "http://localhost:8080";
+const BASE_URL = "http://localhost:8089/api";
 
 export function getAllUser() {
     return fetch(BASE_URL+'/users')
@@ -15,6 +15,26 @@ export function getLoginInfo(email: string, password: string) {
         .then(response => response.json())
         .catch(error => console.error(error));
 }
+
+
+export function sendLoginInfo(username: string, password: string, email: string, lastname: string, firstname: string) {
+
+
+    const User = {
+        firstName: firstname,
+        lastName: lastname,
+        username: username,
+        email: email,
+        password: password,
+        img: "img"
+    };
+
+    return fetch(BASE_URL+'/users/' + User )
+        .then(response => response.json())
+        .catch(error => console.error(error));
+}
+
+
 
 
 // const getUser = () => {

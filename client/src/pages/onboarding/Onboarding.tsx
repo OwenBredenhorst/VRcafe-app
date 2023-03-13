@@ -54,9 +54,9 @@ const Onboarding: React.FC = () => {
         const userInfo = sessionStorage.getItem('userInfo');
 
         /* Checking if the user is logged in. If the user is logged in, it will redirect to the welcome page. */
-        if (userInfo !== 'undefined' || userInfo) {
-            history.push('/welcome');
-        }
+        // if (userInfo !== 'undefined' || userInfo) {
+        //     history.push('/welcome');
+        // }
 
     }, []);
 

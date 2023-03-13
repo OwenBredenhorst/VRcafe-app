@@ -1,6 +1,8 @@
 package vrcafe.repositories;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Repository;
 import vrcafe.models.User;
 
@@ -15,6 +17,7 @@ public class UserMemoryRepository {
     private static int userCount = 0;
     private final List<User> users;
 
+    private BCryptPasswordEncoder encoder;
     public UserMemoryRepository() {
         users = new ArrayList<>();
         generateUser();
@@ -22,17 +25,17 @@ public class UserMemoryRepository {
 
     private void generateUser() {
 
-        save(new User(null, "Emma", "Johnson", "emma_johnson", "emma@gmail.com", "p4ssword", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
-        save(new User(null, "admin", "admin", "admin_admin", "admin@gmail.com", "admin", "https://avatars.githubusercontent.com/u/119951456?v=4.png"));
-        save(new User(null, "Max", "Smith", "max_smithy", "maxsmith@gmail.com", "maxpassword", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
-        save(new User(null, "Sophie", "Davis", "sophiedavis", "sophie.davis@gmail.com", "sophie123", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
-        save(new User(null, "Oliver", "Jones", "oliverjones", "ojones@gmail.com", "oliver456", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
-        save(new User(null, "Ava", "Taylor", "avataylor", "ava.taylor@gmail.com", "taylorpass", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
-        save(new User(null, "William", "Wilson", "williamwilson", "wwilson@gmail.com", "wilson1234", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
-        save(new User(null, "Emily", "Martin", "emily_martin", "emartin@gmail.com", "emilypass", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
-        save(new User(null, "Benjamin", "Moore", "benmoore", "benjamin.moore@gmail.com", "moorepass", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
-        save(new User(null, "Charlotte", "Garcia", "charlotteg", "charlotte.garcia@gmail.com", "charlotte123", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
-        save(new User(null, "Lucas", "Rodriguez", "lucasr", "lucas.rodriguez@gmail.com", "rodriguezpass", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
+        save(new User(null, "Emma", "Johnson", "emma_johnson", "emma@gmail.com", "$2a$10$C80Wh.FvY9OFg3MoATx0NOjJT9VQarmm6WufuAS3xFY2.tsc9ewUu", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
+        save(new User(null, "admin", "admin", "admin_admin", "admin@gmail.com" ,"$2a$10$C80Wh.FvY9OFg3MoATx0NOjJT9VQarmm6WufuAS3xFY2.tsc9ewUu", "https://avatars.githubusercontent.com/u/119951456?v=4.png"));
+        save(new User(null, "Max", "Smith", "max_smithy", "maxsmith@gmail.com", "$2a$10$C80Wh.FvY9OFg3MoATx0NOjJT9VQarmm6WufuAS3xFY2.tsc9ewUu", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
+        save(new User(null, "Sophie", "Davis", "sophiedavis", "sophie.davis@gmail.com", "$2a$10$C80Wh.FvY9OFg3MoATx0NOjJT9VQarmm6WufuAS3xFY2.tsc9ewUu", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
+        save(new User(null, "Oliver", "Jones", "oliverjones", "ojones@gmail.com", "$2a$10$C80Wh.FvY9OFg3MoATx0NOjJT9VQarmm6WufuAS3xFY2.tsc9ewUu", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
+        save(new User(null, "Ava", "Taylor", "avataylor", "ava.taylor@gmail.com", "$2a$10$C80Wh.FvY9OFg3MoATx0NOjJT9VQarmm6WufuAS3xFY2.tsc9ewUu", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
+        save(new User(null, "William", "Wilson", "williamwilson", "wwilson@gmail.com", "$2a$10$C80Wh.FvY9OFg3MoATx0NOjJT9VQarmm6WufuAS3xFY2.tsc9ewUu", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
+        save(new User(null, "Emily", "Martin", "emily_martin", "emartin@gmail.com", "$2a$10$C80Wh.FvY9OFg3MoATx0NOjJT9VQarmm6WufuAS3xFY2.tsc9ewUu", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
+        save(new User(null, "Benjamin", "Moore", "benmoore", "benjamin.moore@gmail.com", "$2a$10$C80Wh.FvY9OFg3MoATx0NOjJT9VQarmm6WufuAS3xFY2.tsc9ewUu", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
+        save(new User(null, "Charlotte", "Garcia", "charlotteg", "charlotte.garcia@gmail.com", "$2a$10$C80Wh.FvY9OFg3MoATx0NOjJT9VQarmm6WufuAS3xFY2.tsc9ewUu", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
+        save(new User(null, "Lucas", "Rodriguez", "lucasr", "lucas.rodriguez@gmail.com", "$2a$10$C80Wh.FvY9OFg3MoATx0NOjJT9VQarmm6WufuAS3xFY2.tsc9ewUu", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"));
 
     }
 
@@ -116,7 +119,6 @@ public class UserMemoryRepository {
      * Find a user by email and password.
      *
      * @param email The email of the user
-     * @param password The password of the user.
      * @return A User object
      */
     public User findByEmail(String email) {
