@@ -2,8 +2,7 @@ package nowel.vrcafe.server.model;
 
 import org.springframework.data.annotation.Id;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -15,12 +14,11 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @since   05/3/2023
  */
 
-@Entity
+
 public class Achievement {
 
     private static final AtomicInteger idGenerator = new AtomicInteger(0);
     @Id
-    @GeneratedValue
     private Integer id;
     private String title;
     private String description;

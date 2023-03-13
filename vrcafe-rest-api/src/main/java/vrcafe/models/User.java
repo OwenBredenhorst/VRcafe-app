@@ -1,5 +1,4 @@
-package nowel.vrcafe.server.model;
-import org.springframework.data.annotation.Id;
+package vrcafe.models;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -13,10 +12,10 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 
 
-public class  User {
+public class User {
 
     private static final AtomicInteger idGenerator = new AtomicInteger(0);
-    @Id
+
     private Integer id;
     private String firstName;
     private String lastName;
