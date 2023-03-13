@@ -1,5 +1,6 @@
 package vrcafe.models;
 
+import javax.annotation.processing.Generated;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**

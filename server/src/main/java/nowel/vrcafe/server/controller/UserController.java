@@ -72,7 +72,13 @@ public class UserController {
     public User getUserByloginInfo(
             @PathVariable String email, @PathVariable String password) {
 
-        return repo.findByEmailAndPassword(email, password);
+        User user = repo.findByEmailAndPassword(email, password);
+
+        if (user == null) {
+            throw new UserNotFoundExeption("User not found for email: " + email);
+        }
+
+        return user;
     }
 
 

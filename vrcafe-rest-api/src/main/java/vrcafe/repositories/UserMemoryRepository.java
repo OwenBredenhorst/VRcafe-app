@@ -119,9 +119,9 @@ public class UserMemoryRepository {
      * @param password The password of the user.
      * @return A User object
      */
-    public User findByEmailAndPassword(String email, String password) {
+    public User findByEmail(String email) {
         for(User u : users) {
-            if(u.getEmail().equals(email) && u.getPassword().equals(password)) {
+            if(u.getEmail().equals(email)) {
                 return u;
             }
         }

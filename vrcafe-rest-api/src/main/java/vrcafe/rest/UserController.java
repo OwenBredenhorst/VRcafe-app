@@ -2,8 +2,10 @@ package vrcafe.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import vrcafe.exceptions.ResourceNotFoundException;
 import vrcafe.models.User;
 import vrcafe.repositories.UserMemoryRepository;
 
@@ -24,6 +26,8 @@ public class UserController {
     @Autowired
     private UserMemoryRepository repo;
 
+    @Autowired
+    private BCryptPasswordEncoder encoder;
 
 
     /**
@@ -41,6 +45,10 @@ public class UserController {
     @PostMapping("/users")
     @CrossOrigin(origins = "http://localhost:3000/")
     public ResponseEntity<User> createUser(@RequestBody User user) {
+
+        String encodedPassword = encoder.encode(user.getPassword());
+        user.setPassword(encodedPassword);
+
         User savedUser = repo.save(user);
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedUser.getId()).toUri();
@@ -83,9 +91,14 @@ public class UserController {
     public User getUserByloginInfo(
             @PathVariable String email, @PathVariable String password) {
 
-        return repo.findByEmailAndPassword(email, password);
-    }
+        User user = repo.findByEmail(email);
 
+        if (user != null && encoder.matches(password, user.getPassword())) {
+            return user;
+        } else {
+            throw new ResourceNotFoundException("User not found for email: " + email);
+        }
+    }
 
 
 
