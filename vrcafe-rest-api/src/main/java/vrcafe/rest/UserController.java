@@ -1,13 +1,13 @@
 package vrcafe.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import vrcafe.models.User;
 import vrcafe.repositories.UserMemoryRepository;
 
+import java.net.URI;
 import java.util.List;
 
 /**
@@ -37,6 +37,16 @@ public class UserController {
         return repo.getAll();
     }
 
+
+    @PostMapping("/users")
+    @CrossOrigin(origins = "http://localhost:3000/")
+    public ResponseEntity<User> createUser(@RequestBody User user) {
+        User savedUser = repo.save(user);
+
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedUser.getId()).toUri();
+
+        return ResponseEntity.created(location).body(savedUser);
+    }
 
 
     /**
@@ -75,6 +85,7 @@ public class UserController {
 
         return repo.findByEmailAndPassword(email, password);
     }
+
 
 
 
