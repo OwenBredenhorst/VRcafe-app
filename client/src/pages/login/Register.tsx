@@ -77,7 +77,7 @@ const Register: React.FC = () => {
 
                         <IonInput id="age" className="login-input" placeholder="Leeftijd" type="number"></IonInput>
 
-                        <IonButton onClick={handleLogin}  href="/welcome" fill="clear" className="slider-next"
+                        <IonButton onClick={handleLogin} fill="clear" className="slider-next"
                                    style={{marginTop: '90px', border: '25px'}}>Maak een account</IonButton>
                         <a href="/login"><p>Of login hier!</p></a>
                     </div>
